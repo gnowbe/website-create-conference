@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Conference 2025 | Gnowbe Events</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Noto+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* --- BASE & TYPOGRAPHY --- */
+      body {
+        font-family: "Noto Sans", sans-serif;
+      }
+      h1,
+      h2 {
+        font-family: "Noto Serif", serif;
+      }
+
+      /* --- HERO INTRO ANIMATION --- */
+      .intro-images-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+          to bottom right,
+          #5ec3c5,
+          /* brand-teal */ #935fee /* brand-purple */
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 20;
+      }
+      .hero-content {
+        opacity: 0;
+      }
+      .images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .img {
+        width: 180px;
+        height: 200px;
+        background-size: cover;
+        background-position: 50% 50%;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      @media (max-width: 767px) {
+        .img {
+          width: 80px;
+          height: 100px;
+        }
+        .images {
+          max-width: 300px;
+        }
+      }
+      .img-1 {
+        background-image: url(images/peck.png);
+      }
+      .img-2 {
+        background-image: url(images/adriana.jpg);
+      }
+      .img-3 {
+        background-image: url(images/ben.jpg);
+      }
+      .img-4 {
+        background-image: url(images/leenah.jpeg);
+      }
+      .img-5 {
+        background-image: url(images/marta.jpg);
+      }
+      .img-6 {
+        background-image: url(images/niharika.jpeg);
+      }
+      .img-7 {
+        background-image: url(https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400);
+      }
+      .img-8 {
+        background-image: url(https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400);
+      }
+
+      /* --- MODAL ANIMATION --- */
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(20px) scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 0.3s ease-out forwards;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#EDF2F4] text-gray-800 antialiased">
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-40 shadow-sm">
+      <div
+        class="container mx-auto px-6 max-w-screen-xl flex justify-between items-center py-4"
+      >
+        <a href="#" aria-label="Gnowbe Home">
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 400 150"
+            class="h-9 w-auto text-[#B41F24]"
+          >
+            <use xlink:href="#gnowbe-logo-path" />
+          </svg>
+        </a>
+        <nav
+          class="hidden md:flex items-center space-x-6 text-base font-medium"
+        >
+          <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
+          <a href="#speakers" class="text-gray-600 hover:text-gray-900"
+            >Speakers</a
+          >
+          <a href="#agenda" class="text-gray-600 hover:text-gray-900">Agenda</a>
+        </nav>
+        <a
+          href="https://share.hsforms.com/1XoiN_HZkSP2CU5H2NbILpA1ltj9"
+          class="bg-[#FFB606] hover:bg-[#EAA800] text-gray-900 px-8 py-3 rounded-md font-semibold transition-colors text-lg shadow-md"
+          >Register Now</a
+        >
+      </div>
+    </header>
+
+    <section
+      id="hero"
+      class="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-6 overflow-hidden bg-gradient-to-br from-[#5EC3C5] via-[#935FEE] to-[#2c1a4c]"
+    >
+      <div class="intro-images-container">
+        <div class="images">
+          <div class="img img-1"></div>
+          <div class="img img-2"></div>
+          <div class="img img-3"></div>
+          <div class="img img-4"></div>
+          <div class="img img-5"></div>
+          <div class="img img-6"></div>
+          <div class="img img-7"></div>
+          <div class="img img-8"></div>
+        </div>
+      </div>
+
+      <div class="relative z-10 hero-content">
+        <h1
+          class="text-4xl sm:text-5xl md:text-7xl text-white font-serif leading-tight max-w-4xl mx-auto [text-shadow:_0_2px_4px_rgb(0_0_0_/_40%)]"
+        >
+          Unlock Human Potential in the Age of AI
+        </h1>
+        <div class="text-lg md:text-xl mt-6 text-white/90">
+          <p>October 8-9, 2025</p>
+          <p>A Global Virtual Summit</p>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="about" class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-screen-xl">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+              Define the Trends, Don't Just Chase Them.
+            </h2>
+          </div>
+          <div
+            class="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-lg"
+          >
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+              <p class="text-lg text-gray-600">
+                Create '25 isn't a webinar where you'll listen to theories. It's
+                a live, interactive summit where you'll build the strategy.
+                We’re bringing together the leaders, creators, and innovators
+                who aren't just talking about the future of work - they're
+                actively building it.
+              </p>
+              <div class="bg-slate-100 p-6 rounded-lg border border-slate-200">
+                <h3 class="text-2xl font-bold text-gray-900">
+                  What You'll Gain:
+                </h3>
+                <ul class="mt-6 space-y-4 text-lg text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-[#5EC3C5] mr-3 mt-1 font-bold">✔</span>
+                    <strong class="text-gray-800"
+                      >Actionable AI Playbooks</strong
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-[#5EC3C5] mr-3 mt-1 font-bold">✔</span>
+                    <strong class="text-gray-800">Peer-to-Peer Strategy</strong>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-[#5EC3C5] mr-3 mt-1 font-bold">✔</span>
+                    <strong class="text-gray-800">Expert Roadmaps</strong>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="speakers" class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-screen-xl">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+              Meet the Innovators
+            </h2>
+            <p class="mt-4 text-lg text-gray-600">
+              Learn from leaders actively shaping the future of work.
+            </p>
+          </div>
+          <div
+            id="speakers-grid"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          ></div>
+        </div>
+      </section>
+
+      <section id="agenda" class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-screen-xl">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Agenda</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg">
+              <h3
+                class="text-2xl font-bold text-gray-900 border-b-2 border-slate-200 pb-4"
+              >
+                Global / Asia Agenda
+                <span class="block text-base text-gray-600 font-medium mt-1"
+                  >(Oct 8–9, 2025, SGT)</span
+                >
+              </h3>
+
+              <div class="mt-8">
+                <h4 class="text-lg font-bold mb-4">Day 1 – Oct 8, 2025</h4>
+                <div
+                  class="relative border-l-2 border-slate-200 pl-6 space-y-6"
+                >
+                  <div class="relative">
+                    <div
+                      class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-slate-400 ring-4 ring-white"
+                    ></div>
+                    <p class="font-semibold text-gray-800">Peck Kem Low</p>
+                    <p class="text-sm text-gray-600">CHRO PSD (Singapore)</p>
+                    <p class="mt-1 text-xs font-bold uppercase text-[#5EC3C5]">
+                      Keynote Speaker
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-slate-400 ring-4 ring-white"
+                    ></div>
+                    <p class="font-semibold text-gray-800">Marta Jonata</p>
+                    <p class="text-sm text-gray-600">Bank Index (Indonesia)</p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-slate-400 ring-4 ring-white"
+                    ></div>
+                    <p class="font-semibold text-gray-800">Leenah Iskandari</p>
+                    <p class="text-sm text-gray-600">
+                      Edutainment (Saudi Arabia)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="text-lg font-bold mb-4">Day 2 – Oct 9, 2025</h4>
+                <div
+                  class="relative border-l-2 border-slate-200 pl-6 space-y-6"
+                >
+                  <div class="relative">
+                    <div
+                      class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-slate-400 ring-4 ring-white"
+                    ></div>
+                    <p class="font-semibold text-gray-800">
+                      Anthony Pangilinan
+                    </p>
+                    <p class="text-sm text-gray-600">
+                      Businessworks (Philippines)
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-slate-400 ring-4 ring-white"
+                    ></div>
+                    <p class="font-semibold text-gray-800">
+                      Niharika Chaturvedi
+                    </p>
+                    <p class="text-sm text-gray-600">
+                      Singapore Fashion Council (Singapore)
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-slate-400 ring-4 ring-white"
+                    ></div>
+                    <p class="font-semibold text-gray-800">CHRO of the Year</p>
+                    <p class="text-sm text-gray-600">
+                      (Final announcement pending)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg">
+              <h3
+                class="text-2xl font-bold text-gray-900 border-b-2 border-slate-200 pb-4"
+              >
+                Americas Agenda
+                <span class="block text-base text-gray-600 font-medium mt-1"
+                  >(Oct 8–9, 2025, EST)</span
+                >
+              </h3>
+
+              <div class="mt-8">
+                <h4 class="text-lg font-bold mb-4">Day 1 – Oct 8, 2025</h4>
+                <div
+                  class="relative border-l-2 border-slate-200 pl-6 space-y-6"
+                >
+                  <div class="relative">
+                    <div
+                      class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-slate-400 ring-4 ring-white"
+                    ></div>
+                    <p class="font-semibold text-gray-800">Martin Deacon</p>
+                    <p class="text-sm text-gray-600">
+                      Speaker (Breakout 1, Oct 8)
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-slate-400 ring-4 ring-white"
+                    ></div>
+                    <p class="font-semibold text-gray-800">Samaa Waseem</p>
+                    <p class="text-sm text-gray-600">
+                      Breakfast (Breakout 2, Oct 8)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="text-lg font-bold mb-4">Day 2 – Oct 9, 2025</h4>
+                <div
+                  class="relative border-l-2 border-slate-200 pl-6 space-y-6"
+                >
+                  <div class="relative">
+                    <div
+                      class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-slate-400 ring-4 ring-white"
+                    ></div>
+                    <p class="font-semibold text-gray-800">
+                      Benjamin Lowenkron
+                    </p>
+                    <p class="text-sm text-gray-600">
+                      LCTCS (Breakout 1, Oct 9)
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-slate-400 ring-4 ring-white"
+                    ></div>
+                    <p class="font-semibold text-gray-800">Adriana Ruiz</p>
+                    <p class="text-sm text-gray-600">
+                      Agami (Breakout 2, Oct 9)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section
+      id="register"
+      class="relative bg-gradient-to-br from-[#5EC3C5] via-[#935FEE] to-[#2c1a4c] overflow-hidden py-36 md:py-48"
+    >
+      <div
+        class="relative z-10 container mx-auto px-6 text-center max-w-screen-xl"
+      >
+        <h2
+          class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
+        >
+          Ready to Shape the Future?
+        </h2>
+        <p
+          class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90 font-medium"
+        >
+          Join L&D leaders, innovators, and expert creators at Create '25.
+          Secure your spot to gain actionable playbooks, peer-to-peer
+          strategies, and the insights you need to lead in the age of AI.
+        </p>
+        <div
+          class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4"
+        >
+          <a
+            href="https://share.hsforms.com/1XoiN_HZkSP2CU5H2NbILpA1ltj9"
+            class="bg-[#FFB606] hover:bg-[#EAA800] text-gray-900 px-8 py-3 rounded-md font-semibold transition-colors text-base md:text-xl w-full sm:w-auto shadow-md"
+            >Register Now for Free</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-white border-t border-slate-200">
+      <div class="container mx-auto px-6 py-12 max-w-screen-xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          <div class="col-span-2 md:col-span-4 lg:col-span-1">
+            <a
+              href="https://www.gnowbe.com/"
+              aria-label="Gnowbe Homepage"
+              class="text-[#B41F24]"
+            >
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 400 150"
+                class="h-9 w-auto"
+              >
+                <use xlink:href="#gnowbe-logo-path" />
+              </svg>
+            </a>
+            <div class="mt-6 flex items-start space-x-2">
+              <img
+                src="images/gdpr.svg"
+                alt="GDPR Compliant Badge"
+                loading="lazy"
+              />
+              <img
+                src="images/ccpa.svg"
+                alt="CCPA Compliant Badge"
+                loading="lazy"
+              />
+            </div>
+            <div class="mt-6 flex items-center space-x-5">
+              <a
+                href="https://www.linkedin.com/company/gnowbe/"
+                aria-label="Gnowbe on LinkedIn"
+                class="text-gray-400 hover:text-gray-600"
+              >
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/c/Gnowbe"
+                aria-label="Gnowbe on YouTube"
+                class="text-gray-400 hover:text-gray-600"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  style="transform: translateY(2px)"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19.425 6.062a2.455 2.455 0 0 0-1.736-1.736C16.002 4 12 4 12 4s-4.002 0-5.689.326a2.455 2.455 0 0 0-1.736 1.736C4 7.749 4 10 4 10s0 2.251.311 3.938a2.455 2.455 0 0 0 1.736 1.736C7.998 16 12 16 12 16s4.002 0 5.689-.326a2.455 2.455 0 0 0 1.736-1.736C20 12.251 20 10 20 10s0-2.251-.575-3.938zM10 12.5v-5l4.5 2.5-4.5 2.5z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/gnowbe"
+                aria-label="Gnowbe on Instagram"
+                class="text-gray-400 hover:text-gray-600"
+              >
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 32 32"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"
+                  />
+                  <path
+                    d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-gray-800">Product</h3>
+            <ul class="mt-4 space-y-3">
+              <li>
+                <a
+                  href="https://www.gnowbe.com/referral-program"
+                  class="text-gray-600 hover:text-gray-900"
+                  >Referral Program</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://learn.gnowbe.com/"
+                  class="text-gray-600 hover:text-gray-900"
+                  >GnowbeLearn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.gnowbe.com/feature-updates"
+                  class="text-gray-600 hover:text-gray-900"
+                  >Feature Updates</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.gnowbe.com/gnowbe-integrations"
+                  class="text-gray-600 hover:text-gray-900"
+                  >Integrations</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-gray-800">Resources</h3>
+            <ul class="mt-4 space-y-3">
+              <li>
+                <a
+                  href="https://www.gnowbe.com/blog"
+                  class="text-gray-600 hover:text-gray-900"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.gnowbe.com/microlearning-instructional-design"
+                  class="text-gray-600 hover:text-gray-900"
+                  >Microlearning Instruction Design (MID)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.gnowbe.com/events-gnowbe"
+                  class="text-gray-600 hover:text-gray-900"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.gnowbe.com/scholarship"
+                  class="text-gray-600 hover:text-gray-900"
+                  >Scholarships</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-gray-800">Help & Support</h3>
+            <ul class="mt-4 space-y-3">
+              <li>
+                <a
+                  href="https://gnowbe.zendesk.com/hc/en-us"
+                  class="text-gray-600 hover:text-gray-900"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.gnowbe.com/privacy"
+                  class="text-gray-600 hover:text-gray-900"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.gnowbe.com/chat-with-us"
+                  class="text-gray-600 hover:text-gray-900"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mt-12 border-t border-slate-200 pt-8 text-center text-sm text-gray-500"
+        >
+          <p>© 2025 Gnowbe. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <svg style="display: none">
+      <symbol id="gnowbe-logo-path" fill="currentColor">
+        <path
+          d="M41.7,93.4L22,92.7c-2.1-0.1-3.9-0.7-3.9-2.5c0-2.6,3.2-2.9,17.2-5c13.4-2,20.6-7.5,20.6-17.3 c0-10-8.7-15.5-22.7-16.9l4.7-10.2c0.8,0.3,1.7,0.4,2.6,0.4c5.1,0,9.3-4.2,9.3-9.3c0-5.1-4.2-9.3-9.3-9.3c-5.1,0-9.3,4.2-9.3,9.3 c0,3.3,1.7,6.1,4.2,7.8l-5.2,11.2C16.7,51.3,6,57.3,6,69.4c0,9.7,9.6,14.5,19.6,15.4v0.2C13.2,85.7,6,90.1,6,98.8 c0,3.8,1.6,6.8,6.1,8.3v0.2c-4.6,0.3-9.4,3.1-9.4,9.2c0,5.8,7.7,11.7,25.8,11.7c20.1,0,30.9-6.8,30.9-18.4 C59.5,99.5,54.4,94,41.7,93.4 M25,68.3c0-13.3,2.3-15.4,5.9-15.4c3.6,0,5.9,2.1,5.9,15.4c0,13.3-2.3,15.4-5.9,15.4 C27.4,83.7,25,81.6,25,68.3 M29,125.5c-11.2,0-18.9-3.2-18.9-9.9c0-4.7,2.2-6.6,4.6-6.6c23.8,2.5,35-2.1,35,7.5 C49.7,121.8,43.7,125.5,29,125.5"
+        />
+        <path
+          d="M119.9,95.9V67.5c0-9.7-3-16.6-14.2-16.6c-6.1,0-10.6,1.7-18.4,7.7v-7.7c-19.3,4.9-26.4,2.9-26.4,4.7 c0,2.1,7.4,0.8,7.4,8.4v32c0,5.5-6.5,3.3-6.5,5.7c0,0.6,0.2,1.1,1.2,1.1c4.2,0,9-0.2,14.7-0.2c5.7,0,10.5,0.2,13.9,0.2 c1,0,1.2-0.6,1.2-1.1c0-2.3-5.6-0.2-5.6-5.7V62.2c2.3-2.2,5.5-4.4,8.4-4.4c2.7,0,5.2,1.8,5.2,6.7v31.4c0,5.5-5.6,3.3-5.6,5.7 c0,0.6,0.2,1.1,1.2,1.1c3.4,0,8.2-0.2,13.9-0.2c5.7,0,10.5,0.2,14.7,0.2c1,0,1.2-0.6,1.2-1.1C126.3,99.3,119.9,101.4,119.9,95.9"
+        />
+        <path
+          d="M157.4,50.9c-16.8,0-29.5,12.3-29.5,26.3c0,14,12.7,26.3,29.5,26.3c16.8,0,29.5-12.3,29.5-26.3 C186.9,63.2,174.2,50.9,157.4,50.9 M157.4,100.7c-4.8,0-8-2.9-8-23.6c0-20.7,3.2-23.6,8-23.6c4.8,0,8,2.9,8,23.6 C165.5,97.8,162.2,100.7,157.4,100.7"
+        />
+        <path
+          d="M271.8,51.6c-2.8,0-5.7,0.2-8.5,0.2c-2.9,0-5.7-0.2-8.6-0.2c-1,0-1.7,0.3-1.7,1.2c0,1.9,5.9,0.7,5.9,7.8 c0,2.7-0.7,5.6-2.1,8.8L251.4,81l-8.2-19.7c-0.6-1.3-1.2-2.5-1.2-4.4c0-3.4,4-2.7,4-4.4c0-0.8-0.9-1.1-2.1-1.1 c-4.2,0-8.4,0.2-12.6,0.2c-4.2,0-8.4-0.2-12.6-0.2c-1.2,0-1.9,0.1-1.9,0.9c0,1.7,3,0.4,5,5.3l4.1,9.7l-6.6,13.1l-8.6-19.8 c-0.6-1.3-1.2-2.7-1.2-3.8c0-3.1,4-2.6,4-4.4c0-0.8-0.6-1-1.7-1c-4.7,0-9.2,0.2-13.5,0.2c-4.5,0-8.9-0.2-13.4-0.2 c-1.3,0-2,0.2-2,0.9c0,2.1,3.8,0,6.7,6.5l19.3,42.7c0.4,0.9,0.9,1.8,2,1.8c1.1,0,1.4-0.9,1.9-1.8l14.4-31.1l13.3,31.1 c0.4,0.9,0.9,1.8,2,1.8c1.1,0,1.5-0.9,1.9-1.8l18.4-38.8c4.8-10.1,10.8-7.9,10.8-10.1C273.8,52.1,273,51.6,271.8,51.6"
+        />
+        <path
+          d="M310.1,50.9c-8,0-11.6,2.9-13.6,4.7V20.9c-19.2,7.3-25.9,4.4-25.9,6.9c0,2.1,6.9,0.7,6.9,6.3v68.2 c0,0.8,0.1,1.1,0.3,1.1c0.7,0,1-0.4,2.7-1.7l4.5-3.5c5,2.7,10.5,5.1,18.3,5.1c18.9,0,29.7-14.3,29.7-28.2 C333,58.9,323.8,50.9,310.1,50.9 M303.1,101.4c-3.8,0-6.6-2.1-6.6-5.8V58.8c0-0.9,1.1-1.7,2.9-1.7c7.8,0,13.3,8.6,13.3,24.5 C312.7,92.6,310.7,101.4,303.1,101.4"
+        />
+        <path
+          d="M388.2,82.3c-0.9,0-1.3,1.2-3.1,3.5c-2.7,3.4-6.1,5.6-12.3,5.6c-8.4,0-14.3-6.5-15.3-17.9h31.1 c-0.2-15.2-11.1-22.6-23-22.6c-15.8,0-27.3,11.6-27.3,26.5c0,15.1,10.6,26,26.4,26c21.1,0,24.6-17.7,24.6-19.8 C389.2,82.7,388.8,82.3,388.2,82.3 M364.3,53.6c5.8,0,7,6.5,7,17.2h-14.1C357.2,60,358.5,53.6,364.3,53.6"
+        />
+      </symbol>
+    </svg>
+
+    <div
+      id="speaker-modal"
+      class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50"
+    >
+      <div
+        class="max-w-3xl w-full bg-white shadow-lg rounded-xl p-8 relative animate-fade-in-up"
+      >
+        <button
+          id="close-modal-btn"
+          class="absolute top-4 right-4 text-3xl font-light text-gray-500 hover:text-gray-800"
+        >
+          &times;
+        </button>
+        <div class="text-center">
+          <img
+            id="modal-speaker-img"
+            alt="Speaker headshot"
+            class="w-48 h-48 object-cover rounded-full mx-auto shadow-md border-4 border-white"
+          />
+          <h1
+            id="modal-speaker-name"
+            class="text-4xl font-bold font-serif text-gray-900 mt-6"
+          ></h1>
+          <p id="modal-speaker-company" class="text-lg text-gray-500 mt-1"></p>
+        </div>
+        <p
+          id="modal-speaker-bio"
+          class="mt-8 text-gray-700 max-w-2xl mx-auto text-left whitespace-pre-wrap"
+        ></p>
+        <div
+          id="modal-speaker-links"
+          class="flex justify-center gap-6 mt-6"
+        ></div>
+      </div>
+    </div>
+
+    <script>
+      // --- SPEAKER DATA ---
+      const speakers = [
+        {
+          id: "peck-kem-low",
+          name: "Peck Kem Low",
+          company: "CHRO PSD",
+          img: "images/peck.png",
+          bio: `Peck Kem is the Chief HR Officer and Advisor (Workforce Development) for Singapore's Public Service Division. She is responsible in enhancing HR capabilities across the public sector. Her prior role was Senior Director for Human Resource & Organisation Development at GAIN, managing HR and corporate administration globally.\n\nHer career spans quality engineering, manufacturing management, and VP of HR in the private sector with Tandon, Western Digital, Hewlett Packard, Agilent Technologies, and Avago Technologies. In the public sector, she was a Divisional Director at the Ministry of Manpower.\n\nHer diverse background offers a unique leadership perspective across Asian, European, and American cultures.\n\nPeck Kem is the first Asian CIPD Chartered Companion and was listed as one of the 100 Most HR influencers from Southeast Asia. She was also named as one of Asia's Top 50 HR Leaders in 2024 by SpeakIn Asia.\n\nIn addition, she currently serves as President of Singapore Human Resources Institute and President of the World Federation of People Management Associations.`,
+          links: {
+            linkedin: "https://linkedin.com/in/example",
+            twitter: "https://twitter.com/example",
+          },
+        },
+        {
+          id: "marta-jonata",
+          name: "Marta Jonatan",
+          company: "Bank Index",
+          img: "images/marta.jpg",
+          bio: `Marta Jonatan is the Head of Human Capital at Bank Index Selindo, with over 20 years leading HR across banking, tech, and healthcare. She’s held senior roles at Microsoft, Barclays, Citibank, Lippo, and Siloam Hospitals, driving culture, talent, and transformation at scale. \nMarta is known for building future-ready organizations - reskilling teams, coaching leaders, and aligning people strategy with business growth.`,
+          links: {
+            linkedin: "https://id.linkedin.com/in/marta-jonatan-b21a171a",
+          },
+        },
+        {
+          id: "leenah-iskandari",
+          name: "Leenah Iskandari",
+          company: "Edutainment (Saudi Arabia)",
+          img: "images/leenah.jpeg",
+          bio: "Detailed biography coming soon.",
+          links: {},
+        },
+        {
+          id: "anthony-pangilinan",
+          name: "Anthony Pangilinan",
+          company: "Businessworks",
+          img: "images/anthony.png",
+          bio: `Our speaker is a certified trainer and trainer of trainers in the Philippines. He has conducted hundreds of change management programs in over 50 countries over a span 30 years. He is a multi-platform communicator and facilitator, engaging in workshops, events, tri-media, social media, and publications to facilitate social, institutional and individual change - including a recently-released masterclass available for digital download entitled 'Maximizing Me'.\n\nHe holds an Executive Master in Business Administration from Tsinghua (Ching-Hwa) University in Beijing and INSEAD (In-Si-Yad) Business School based in Fontainebleau. He also holds an Executive Master in Change degree from INSEAD in Singapore. He is the host of CHANGE MAKERS and AT YOUR HOME which aired on Cignal and TV5’s One News Channel. A former world president of AIESEC International, the Founder and Chairman of the Master's Lighthouse Foundation, President of Called to Rescue Philippines, a finisher of the 6-world marathon majors and a father of five and husband to one, he is indeed one lifelong learner in leading others, and yourself, amidst a changing and often chaotic environment.`,
+          links: {
+            instagram: "https://instagram.com/anthonypangilinan",
+            tiktok: "https://tiktok.com/@anthonypangilinan",
+          },
+        },
+        {
+          id: "niharika-chaturvedi",
+          name: "Niharika Chaturvedi",
+          company: "Singapore Fashion Council",
+          img: "images/niharika.jpeg",
+          bio: `Niharika Chaturvedi is a dynamic HR leader with extensive experience driving transformative change and fostering employee engagement across APAC and global markets. Her expertise spans HR Business Partnering, Talent Acquisition, and Employee Engagement, with a strong emphasis on creating agile processes that support continuous improvement and enhance overall business performance. As the HR Director at Singapore Fashion Council, she is working on elevating the team to the next level of growth and transformation while fostering a performance-driven culture of excellence.  Passionate about talent and organisational success, she is committed to aligning HR strategies with business goals, ensuring a collaborative, inclusive and resilient workplace that drives both employee development, satisfaction and business growth. \n\nPrior to SFC, Niharika spent over a decade in talent consulting with Organisations like Robert Walters, Allegis group and a founding member for Olofsson Consulting and  Regional HR leadership roles with Fintechs like Railsr and Matchmove. Niharika is an active mentor in talent community with NTU and HR fraternity with HR Next Gen.`,
+          links: {
+            linkedin: "https://www.linkedin.com/in/niharikachaturvedi/",
+          },
+        },
+        {
+          id: "martin-deacon",
+          name: "Martin Deacon",
+          company: "Breakout 1",
+          img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800",
+          bio: "Detailed biography coming soon.",
+          links: {},
+        },
+        {
+          id: "samaa-waseem",
+          name: "Samaa Waseem",
+          company: "Breakout 2",
+          img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800",
+          bio: "Detailed biography coming soon.",
+          links: {},
+        },
+        {
+          id: "benjamin-lowenkron",
+          name: "Benjamin Lowenkron",
+          company: "LCTCS",
+          img: "images/ben.jpg",
+          bio: `A transformative leader in education, Benjamin S. Lowenkron currently serves as the Program Director of Distance and Digital Learning for Adult Education at the Louisiana Community and Technical College System (LCTCS). Ben held many positions in higher education over the past two decades, including Program Director of Teaching and Learning Technology,  Academic Student Support Coordinator, and Faculty Champion for the Center for Undergraduate Student Achievement (CUSA) at Baton Rouge Community College (BRCC). He joined BRCC in 2010 as an Adjunct in the Department of English and Humanities before accepting a full-time position as Instructor and then Assistant Professor. Born and raised in Virginia, he graduated from The College of William and Mary before moving to Louisiana, where he completed his graduate work at Louisiana State University. A published poet and the founder of the Delta Mouth Literary Festival, Ben still resides in Baton Rouge with his wife, Brooke, their two girls, and a wild but fun poodle puppy.`,
+          links: {
+            linkedin: "http://www.linkedin.com/in/benjamin-lowenkron-7184132b",
+          },
+        },
+        {
+          id: "adriana-ruiz",
+          name: "Adriana Ruiz",
+          company: "Agami | Innovation Made Easy",
+          img: "images/adriana.jpg",
+          bio: `Founder of Agami | Expert in Design-Led Innovation\n\nWith over a decade of experience in design-led innovation, Adriana designs tools and systems that people can trust to create useful solutions and make a positive impact. Her work focuses on empowering individuals and organizations to build creative confidence and embrace innovation with clarity and purpose.\n\nAs the founder of Agami, she leads a startup that delivers innovation-as-a-service through customized learning programs and collaborative consulting projects. Her approach integrates design, strategy, and technology to support the evolution of business models and the development of resilient innovation ecosystems across Latin America.`,
+          links: {
+            instagram: "https://instagram.com/agamistudios",
+            facebook: "https://facebook.com/agamistudios",
+            linkedin: "https://www.linkedin.com/in/anairdaziur/",
+            website: "https://www.agamistudios.com/",
+          },
+        },
+      ];
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- HERO INTRO ANIMATION SCRIPT ---
+        const introContainer = document.querySelector(
+          ".intro-images-container"
+        );
+        if (introContainer) {
+          const introImages = document.querySelectorAll(
+            ".intro-images-container .img"
+          );
+          const heroContent = document.querySelector(".hero-content");
+          const tl = new TimelineMax();
+          tl.staggerFrom(
+            introImages,
+            0.8,
+            { y: "60", opacity: 0, ease: Power3.easeOut },
+            0.08,
+            "+=0.5"
+          )
+            .to(
+              introImages,
+              0.5,
+              { opacity: 0, scale: 0.9, ease: Power3.easeIn },
+              "+=1.5"
+            )
+            .to(
+              introContainer,
+              0.8,
+              { opacity: 0, ease: Expo.easeInOut },
+              "-=0.4"
+            )
+            .to(heroContent, 1.2, { opacity: 1, ease: Power3.easeOut }, "-=0.6")
+            .set(introContainer, { display: "none" });
+        }
+
+        // --- DYNAMICALLY CREATE SPEAKER CARDS ---
+        const speakersGrid = document.getElementById("speakers-grid");
+        if (speakersGrid) {
+          speakers.forEach((speaker) => {
+            const cardHTML = `
+                <div class="bg-white/80 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer group" data-speaker-id="${speaker.id}">
+                    <div class="relative h-80">
+                        <img src="${speaker.img}" alt="Photo of ${speaker.name}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-xl font-bold text-white">${speaker.name}</h3>
+                            <p class="text-white/80">${speaker.company}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            speakersGrid.innerHTML += cardHTML;
+          });
+        }
+
+        // --- SPEAKER MODAL LOGIC ---
+        const speakerModal = document.getElementById("speaker-modal");
+        const closeModalBtn = document.getElementById("close-modal-btn");
+        const speakersContainer = document.querySelector("#speakers");
+
+        if (speakerModal && closeModalBtn && speakersContainer) {
+          const modalImg = document.getElementById("modal-speaker-img");
+          const modalName = document.getElementById("modal-speaker-name");
+          const modalCompany = document.getElementById("modal-speaker-company");
+          const modalBio = document.getElementById("modal-speaker-bio");
+          const modalLinks = document.getElementById("modal-speaker-links");
+
+          const openModal = (speakerId) => {
+            const speaker = speakers.find((s) => s.id === speakerId);
+            if (speaker) {
+              modalImg.src = speaker.img;
+              modalName.textContent = speaker.name;
+              modalCompany.textContent = speaker.company;
+              modalBio.textContent = speaker.bio;
+              modalLinks.innerHTML = ""; // Clear previous links
+
+              Object.entries(speaker.links).forEach(([key, value]) => {
+                const link = document.createElement("a");
+                link.href = value;
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+                link.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+                link.className = "font-semibold text-blue-600 hover:underline";
+                modalLinks.appendChild(link);
+              });
+              speakerModal.classList.remove("hidden");
+            }
+          };
+
+          const closeModal = () => {
+            speakerModal.classList.add("hidden");
+          };
+
+          speakersContainer.addEventListener("click", (e) => {
+            const card = e.target.closest("[data-speaker-id]");
+            if (card) {
+              openModal(card.dataset.speakerId);
+            }
+          });
+
+          closeModalBtn.addEventListener("click", closeModal);
+          speakerModal.addEventListener("click", (e) => {
+            if (e.target === speakerModal) {
+              closeModal();
+            }
+          });
+          document.addEventListener("keydown", (e) => {
+            if (
+              e.key === "Escape" &&
+              !speakerModal.classList.contains("hidden")
+            ) {
+              closeModal();
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
