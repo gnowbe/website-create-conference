@@ -1,55 +1,72 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>
       Create Conference 2025 | Unlock Human Potential in the Age of AI
     </title>
+
     <meta
       name="description"
       content="Join Create '25, a free global virtual summit on Oct 8-9, 2025. Learn from industry leaders how to unlock human potential and shape the future of work in the age of AI."
     />
+
     <link rel="canonical" href="https://www.gnowbe.com/events/create-2025" />
 
     <meta property="og:type" content="website" />
+
     <meta
       property="og:url"
       content="https://www.gnowbe.com/events/create-2025"
     />
+
     <meta
       property="og:title"
       content="Create Conference 2025 | Unlock Human Potential in the Age of AI"
     />
+
     <meta
       property="og:description"
       content="Join Create '25, a free global virtual summit on Oct 8-9, 2025. Explore actionable AI strategies, peer-to-peer insights, and expert roadmaps."
     />
+
     <meta
       property="og:image"
       content="https://www.gnowbe.com/events/create-2025/og-image.jpg"
     />
+
     <meta name="twitter:card" content="summary_large_image" />
+
     <meta
       property="twitter:url"
       content="https://www.gnowbe.com/events/create-2025"
     />
+
     <meta
       name="twitter:title"
       content="Create Conference 2025 | Unlock Human Potential in the Age of AI"
     />
+
     <meta
       name="twitter:description"
       content="Join Create '25, a free global virtual summit on Oct 8-9, 2025. Explore actionable AI strategies, peer-to-peer insights, and expert roadmaps."
     />
+
     <meta
       name="twitter:image"
       content="https://www.gnowbe.com/events/create-2025/og-image.jpg"
     />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script
@@ -58,73 +75,109 @@
     ></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Noto+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <style>
       /* --- BASE & TYPOGRAPHY --- */
+
       body {
         font-family: "Noto Sans", sans-serif;
       }
+
       h1,
       h2 {
         font-family: "Noto Serif", serif;
       }
 
       /* --- HERO INTRO ANIMATION --- */
+
       .intro-images-container {
         position: absolute;
+
         top: 0;
+
         left: 0;
+
         width: 100%;
+
         height: 100%;
+
         background-image: linear-gradient(
           to bottom right,
+
           #5ec3c5,
           /* brand-teal */ #935fee /* brand-purple */
         );
+
         display: flex;
+
         justify-content: center;
+
         align-items: center;
+
         z-index: 20;
       }
+
       .hero-content {
         opacity: 0;
       }
+
       .images {
         display: flex;
+
         align-items: center;
+
         justify-content: center;
+
         gap: 1rem;
+
         flex-wrap: wrap;
+
         max-width: 800px;
+
         padding: 1rem;
       }
+
       .img {
         width: 180px;
+
         height: 200px;
+
         background-size: cover;
+
         background-position: 50% 50%;
+
         border-radius: 8px;
+
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       }
+
       @media (max-width: 767px) {
         .img {
           width: 80px;
+
           height: 100px;
         }
+
         .images {
           max-width: 300px;
         }
       }
+
       .img-1 {
         background-image: url(images/peck.webp);
       }
+
       .img-2 {
         background-image: url(images/adriana.webp);
       }
+
       .img-3 {
         background-image: url(images/ben.webp);
       }
@@ -136,42 +189,59 @@
       .img-5 {
         background-image: url(images/marta.webp);
       }
+
       .img-6 {
         background-image: url(images/niharika.webp);
       }
+
       @keyframes gradient-move {
         to {
           background-position: 200% center;
         }
       }
+
       h1,
       h2 {
         font-family: "Noto Serif", serif;
+
         background: linear-gradient(90deg, #935fee, #ffb606, #935fee);
+
         background-size: 200% auto;
+
         -webkit-background-clip: text;
+
         background-clip: text;
+
         color: transparent;
+
         animation: gradient-move 10s linear infinite;
       }
+
       @media (max-width: 767px) {
         h1,
         h2 {
           background-position: 0 50%;
+
           animation: none;
         }
       }
+
       /* --- MODAL ANIMATION --- */
+
       @keyframes fade-in-up {
         from {
           opacity: 0;
+
           transform: translateY(20px) scale(0.95);
         }
+
         to {
           opacity: 1;
+
           transform: translateY(0) scale(1);
         }
       }
+
       .animate-fade-in-up {
         animation: fade-in-up 0.3s ease-out forwards;
       }
@@ -184,66 +254,109 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
+
         "@type": "Event",
+
         "name": "Create Conference 2025: Unlock Human Potential in the Age of AI",
+
         "startDate": "2025-10-08",
+
         "endDate": "2025-10-09",
+
         "eventStatus": "https://schema.org/EventScheduled",
+
         "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+
         "location": {
           "@type": "VirtualLocation",
+
           "url": "https://www.gnowbe.com/events/create-2025"
         },
+
         "image": ["https://www.gnowbe.com/events/create-2025/og-image.jpg"],
+
         "description": "Create '25 is a two-day virtual summit dedicated to exploring how organizations are leveraging AI, innovation and intelligent agents to revolutionize how teams work and perform globally.",
+
         "organizer": {
           "@type": "Organization",
+
           "name": "Gnowbe",
+
           "url": "https://www.gnowbe.com"
         },
+
         "offers": {
           "@type": "Offer",
+
           "price": "0",
+
           "priceCurrency": "USD",
+
           "validFrom": "2025-01-01",
+
           "url": "https://share.hsforms.com/1XoiN_HZkSP2CU5H2NbILpA1ltj9",
+
           "availability": "https://schema.org/InStock"
         },
+
         "performer": [
           {
             "@type": "Person",
+
             "name": "Peck Kem Low",
+
             "jobTitle": "CHRO PSD",
+
             "image": "images/peck.webp"
           },
+
           {
             "@type": "Person",
+
             "name": "Marta Jonatan",
+
             "jobTitle": "Bank Index",
+
             "image": "images/marta.webp"
           },
+
           {
             "@type": "Person",
+
             "name": "Anthony Pangilinan",
+
             "jobTitle": "Businessworks",
+
             "image": "images/anthony.webp"
           },
+
           {
             "@type": "Person",
+
             "name": "Niharika Chaturvedi",
+
             "jobTitle": "Singapore Fashion Council",
+
             "image": "images/niharika.webp"
           },
+
           {
             "@type": "Person",
+
             "name": "Benjamin Lowenkron",
+
             "jobTitle": "LCTCS",
+
             "image": "images/ben.webp"
           },
+
           {
             "@type": "Person",
+
             "name": "Adriana Ruiz",
+
             "jobTitle": "Agami | Innovation Made Easy",
+
             "image": "images/adriana.webp"
           }
         ]
@@ -274,9 +387,11 @@
           class="hidden md:flex items-center space-x-6 text-base font-medium"
         >
           <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
+
           <a href="#speakers" class="text-gray-600 hover:text-gray-900"
             >Speakers</a
           >
+
           <a href="#agenda" class="text-gray-600 hover:text-gray-900">Agenda</a>
         </nav>
 
@@ -324,18 +439,21 @@
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-700"
             >About</a
           >
+
           <a
             href="#speakers"
             @click="open = false"
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-700"
             >Speakers</a
           >
+
           <a
             href="#agenda"
             @click="open = false"
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-700"
             >Agenda</a
           >
+
           <a
             href="https://share.hsforms.com/1XoiN_HZkSP2CU5H2NbILpA1ltj9"
             class="block mt-4 w-full text-center bg-[#FFB606] hover:bg-[#EAA800] text-gray-900 px-5 py-2.5 rounded-md font-semibold text-sm transition-colors"
@@ -352,10 +470,15 @@
       <div class="intro-images-container">
         <div class="images">
           <div class="img img-1"></div>
+
           <div class="img img-2"></div>
+
           <div class="img img-3"></div>
+
           <div class="img img-4"></div>
+
           <div class="img img-5"></div>
+
           <div class="img img-6"></div>
         </div>
       </div>
@@ -366,8 +489,10 @@
         >
           Unlock Human Potential in the Age of AI
         </h1>
+
         <div class="text-lg md:text-xl mt-6 text-white/90">
           <p>October 8-9, 2025</p>
+
           <p>A Global Virtual Summit</p>
         </div>
       </div>
@@ -381,18 +506,20 @@
               Define the Trends, Don't Just Chase Them.
             </h2>
           </div>
+
           <div
             class="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-lg"
           >
             <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
               <p class="text-lg text-gray-600">
                 This year, we're moving beyond the theoretical to the practical.
-                As organizations strive to empower their most critical asset
-                ---- their people —new challenges of engagement, training, and
+                As organizations strive to empower their most critical
+                asset—their people—new challenges in engagement, training, and
                 performance have emerged. For leaders, the question is no longer
-                if AI will be part of the solution, but how to implement it
+                whether AI will be part of the solution, but how to implement it
                 effectively, ethically, and at scale.
               </p>
+
               <div class="bg-slate-100 p-6 rounded-lg border border-slate-200">
                 <p>
                   Create '25 is a two-day virtual summit dedicated to exploring
@@ -418,10 +545,12 @@
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
               Meet the Innovators
             </h2>
+
             <p class="mt-4 text-lg text-gray-600">
               Learn from leaders actively shaping the future of work.
             </p>
           </div>
+
           <div
             id="speakers-grid"
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -436,6 +565,7 @@
               Program Agenda
             </h2>
           </div>
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div
               class="bg-white/80 backdrop-blur-sm p-6 sm:p-8 rounded-2xl shadow-lg flex flex-col"
@@ -443,11 +573,13 @@
               <p class="text-sm font-bold uppercase text-[#1B585E]">
                 Panel Discussion Day 1
               </p>
+
               <h3 class="text-xl font-semibold text-gray-800 mt-1">
                 "Beyond the Desk: Unifying Culture & Performance on the
                 Frontline"
               </h3>
-              <p class="mt-2 text-gray-600 flex-grow">
+
+              <p class="mt-2 text-gray-600">
                 This strategic opening panel will address the core challenge of
                 connecting with and developing a distributed, deskless
                 workforce. We’ll explore how leadership, technology, and culture
@@ -466,11 +598,13 @@
               <p class="text-sm font-bold uppercase text-[#1B585E]">
                 Panel Discussion Day 2
               </p>
+
               <h3 class="text-xl font-semibold text-gray-800 mt-1">
                 The AI Co-Pilot: Revolutionizing On-the-Job Training &
                 Enablement
               </h3>
-              <p class="mt-2 text-gray-600 flex-grow">
+
+              <p class="mt-2 text-gray-600">
                 Day two kicks off with a look at the technology transforming the
                 frontline. This session moves past the hype to showcase
                 real-world applications of AI agents and co-pilots in deskless
@@ -489,26 +623,31 @@
               <p class="text-sm font-bold uppercase text-gray-500">
                 Breakout 1
               </p>
+
               <h3 class="text-xl font-semibold text-gray-800 mt-1">
                 AI-Powered Sales Enablement: Coaching Reps from Pocket to Podium
               </h3>
-              <p class="mt-2 text-gray-600 flex-grow">
+
+              <p class="mt-2 text-gray-600">
                 This session is designed for sales enablement leaders managing
                 field-based or in-store sales teams. We will explore how AI
                 agents are becoming the ultimate sales co-pilot. Key topics
                 include:
               </p>
+
               <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
                 <li>
                   <strong>Real-time Battle Cards:</strong> Delivering
                   competitive intelligence and product knowledge on-demand via a
                   simple mobile interface.
                 </li>
+
                 <li>
                   <strong>Pitch Practice & Feedback:</strong> Using AI to
                   simulate customer conversations, scenarios for reps to
                   practice and get additional coaching.
                 </li>
+
                 <li>
                   <strong>CRM & Training Integration:</strong> How to connect AI
                   training tools with your CRM for a seamless view of
@@ -523,28 +662,33 @@
               <p class="text-sm font-bold uppercase text-gray-500">
                 Breakout 2
               </p>
+
               <h3 class="text-xl font-semibold text-gray-800 mt-1">
                 Flow of Work Learning: Onboarding and Upskilling the Global
                 Deskless Workforce
               </h3>
-              <p class="mt-2 text-gray-600 flex-grow">
+
+              <p class="mt-2 text-gray-600">
                 For HR and L&D professionals in industries like logistics,
                 manufacturing, and retail, this session tackles the challenge of
                 rapid and effective training. The discussion focuses on
                 delivering critical knowledge safely and consistently across
                 different cultures and languages. Key topics will include:
               </p>
+
               <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
                 <li>
                   <strong>Just-in-Time SOPs:</strong> Using AI-powered search on
                   a mobile device to access safety protocols or operational
                   procedures instantly on the factory or retail floor.
                 </li>
+
                 <li>
                   <strong>Micro-certifications:</strong> Building and tracking
                   completion of critical skills training (e.g., equipment
                   operation, safety compliance) through a mobile-first platform.
                 </li>
+
                 <li>
                   <strong>Cultural & Linguistic Adaptation:</strong> Strategies
                   for deploying AI learning tools that can be easily localized
@@ -559,22 +703,26 @@
               <p class="text-sm font-bold uppercase text-gray-500">
                 Breakout 3
               </p>
+
               <h3 class="text-xl font-semibold text-gray-800 mt-1">
                 Designing the Deskless Learning Ecosystem: Beyond the AI Hype
               </h3>
-              <p class="mt-2 text-gray-600 flex-grow">
+
+              <p class="mt-2 text-gray-600">
                 An AI agent is a powerful tool, but it's not a complete
                 strategy. This session focuses on building the human and
                 technical ecosystem required for these new technologies to
                 succeed. This is for the strategic leader planning a long-term
                 vision. Key topics will include:
               </p>
+
               <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
                 <li>
                   <strong>The Human Connection:</strong> The role of
                   peer-to-peer learning, mentorship, and manager check-ins in a
                   tech-driven environment.
                 </li>
+
                 <li>
                   <strong>Measuring True ROI:</strong> Moving beyond completion
                   rates to measure impact on performance, safety incidents,
@@ -589,11 +737,13 @@
               <p class="text-sm font-bold uppercase text-gray-500">
                 Breakout 4
               </p>
+
               <h3 class="text-xl font-semibold text-gray-800 mt-1">
                 Closing the Loop: Connecting Rapid Content Creation to Frontline
                 Performance
               </h3>
-              <p class="mt-2 text-gray-600 flex-grow">
+
+              <p class="mt-2 text-gray-600">
                 In today's fast-paced environment, L&D teams are often trapped
                 in slow development cycles, making it hard to prove ROI. This
                 session tackles that challenge head-on. We will explore an agile
@@ -601,19 +751,23 @@
                 for connecting that learning directly to on-the-ground
                 performance data. Join this session to learn how to:
               </p>
+
               <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
                 <li>
                   Adopt an agile workflow to meet the immediate needs of the
                   frontline.
                 </li>
+
                 <li>
                   Leverage modern, mobile-first authoring tools and AI-assisted
                   features to rapidly deploy training.
                 </li>
+
                 <li>
                   Measure what matters by gathering performance data, peer
                   feedback, and business results.
                 </li>
+
                 <li>
                   Create a continuous feedback loop to iterate and improve
                   learning content.
@@ -637,6 +791,7 @@
         >
           Ready to Shape the Future?
         </h2>
+
         <p
           class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90 font-medium"
         >
@@ -644,6 +799,7 @@
           Secure your spot to gain actionable playbooks, peer-to-peer
           strategies, and the insights you need to lead in the age of AI.
         </p>
+
         <div
           class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4"
         >
@@ -674,6 +830,7 @@
                 <use xlink:href="#gnowbe-logo-path" />
               </svg>
             </a>
+
             <div class="mt-6 flex items-start space-x-2">
               <img
                 src="images/gdpr.svg"
@@ -682,6 +839,7 @@
                 width="70"
                 height="28"
               />
+
               <img
                 src="images/ccpa.svg"
                 alt="CCPA Compliant Badge"
@@ -690,6 +848,7 @@
                 height="28"
               />
             </div>
+
             <div class="mt-6 flex items-center space-x-5">
               <a
                 href="https://www.linkedin.com/company/gnowbe/"
@@ -707,6 +866,7 @@
                   />
                 </svg>
               </a>
+
               <a
                 href="https://www.youtube.com/c/Gnowbe"
                 aria-label="Gnowbe on YouTube"
@@ -726,6 +886,7 @@
                   ></path>
                 </svg>
               </a>
+
               <a
                 href="https://www.instagram.com/gnowbe"
                 aria-label="Gnowbe on Instagram"
@@ -740,6 +901,7 @@
                   <path
                     d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"
                   />
+
                   <path
                     d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"
                   />
@@ -750,6 +912,7 @@
 
           <div>
             <h3 class="font-semibold text-gray-800">Product</h3>
+
             <ul class="mt-4 space-y-3">
               <li>
                 <a
@@ -758,6 +921,7 @@
                   >Referral Program</a
                 >
               </li>
+
               <li>
                 <a
                   href="https://learn.gnowbe.com/"
@@ -765,6 +929,7 @@
                   >GnowbeLearn</a
                 >
               </li>
+
               <li>
                 <a
                   href="https://www.gnowbe.com/feature-updates"
@@ -772,6 +937,7 @@
                   >Feature Updates</a
                 >
               </li>
+
               <li>
                 <a
                   href="https://www.gnowbe.com/gnowbe-integrations"
@@ -784,6 +950,7 @@
 
           <div>
             <h3 class="font-semibold text-gray-800">Resources</h3>
+
             <ul class="mt-4 space-y-3">
               <li>
                 <a
@@ -792,6 +959,7 @@
                   >Blog</a
                 >
               </li>
+
               <li>
                 <a
                   href="https://www.gnowbe.com/microlearning-instructional-design"
@@ -799,6 +967,7 @@
                   >Microlearning Instruction Design (MID)</a
                 >
               </li>
+
               <li>
                 <a
                   href="https://www.gnowbe.com/events-gnowbe"
@@ -806,6 +975,7 @@
                   >Events</a
                 >
               </li>
+
               <li>
                 <a
                   href="https://www.gnowbe.com/scholarship"
@@ -818,6 +988,7 @@
 
           <div>
             <h3 class="font-semibold text-gray-800">Help & Support</h3>
+
             <ul class="mt-4 space-y-3">
               <li>
                 <a
@@ -826,6 +997,7 @@
                   >Help Center</a
                 >
               </li>
+
               <li>
                 <a
                   href="https://www.gnowbe.com/privacy"
@@ -833,6 +1005,7 @@
                   >Privacy Policy</a
                 >
               </li>
+
               <li>
                 <a
                   href="https://www.gnowbe.com/chat-with-us"
@@ -843,6 +1016,7 @@
             </ul>
           </div>
         </div>
+
         <div
           class="mt-12 border-t border-slate-200 pt-8 text-center text-sm text-gray-500"
         >
@@ -856,18 +1030,23 @@
         <path
           d="M41.7,93.4L22,92.7c-2.1-0.1-3.9-0.7-3.9-2.5c0-2.6,3.2-2.9,17.2-5c13.4-2,20.6-7.5,20.6-17.3 c0-10-8.7-15.5-22.7-16.9l4.7-10.2c0.8,0.3,1.7,0.4,2.6,0.4c5.1,0,9.3-4.2,9.3-9.3c0-5.1-4.2-9.3-9.3-9.3c-5.1,0-9.3,4.2-9.3,9.3 c0,3.3,1.7,6.1,4.2,7.8l-5.2,11.2C16.7,51.3,6,57.3,6,69.4c0,9.7,9.6,14.5,19.6,15.4v0.2C13.2,85.7,6,90.1,6,98.8 c0,3.8,1.6,6.8,6.1,8.3v0.2c-4.6,0.3-9.4,3.1-9.4,9.2c0,5.8,7.7,11.7,25.8,11.7c20.1,0,30.9-6.8,30.9-18.4 C59.5,99.5,54.4,94,41.7,93.4 M25,68.3c0-13.3,2.3-15.4,5.9-15.4c3.6,0,5.9,2.1,5.9,15.4c0,13.3-2.3,15.4-5.9,15.4 C27.4,83.7,25,81.6,25,68.3 M29,125.5c-11.2,0-18.9-3.2-18.9-9.9c0-4.7,2.2-6.6,4.6-6.6c23.8,2.5,35-2.1,35,7.5 C49.7,121.8,43.7,125.5,29,125.5"
         />
+
         <path
           d="M119.9,95.9V67.5c0-9.7-3-16.6-14.2-16.6c-6.1,0-10.6,1.7-18.4,7.7v-7.7c-19.3,4.9-26.4,2.9-26.4,4.7 c0,2.1,7.4,0.8,7.4,8.4v32c0,5.5-6.5,3.3-6.5,5.7c0,0.6,0.2,1.1,1.2,1.1c4.2,0,9-0.2,14.7-0.2c5.7,0,10.5,0.2,13.9,0.2 c1,0,1.2-0.6,1.2-1.1c0-2.3-5.6-0.2-5.6-5.7V62.2c2.3-2.2,5.5-4.4,8.4-4.4c2.7,0,5.2,1.8,5.2,6.7v31.4c0,5.5-5.6,3.3-5.6,5.7 c0,0.6,0.2,1.1,1.2,1.1c3.4,0,8.2-0.2,13.9-0.2c5.7,0,10.5,0.2,14.7,0.2c1,0,1.2-0.6,1.2-1.1C126.3,99.3,119.9,101.4,119.9,95.9"
         />
+
         <path
           d="M157.4,50.9c-16.8,0-29.5,12.3-29.5,26.3c0,14,12.7,26.3,29.5,26.3c16.8,0,29.5-12.3,29.5-26.3 C186.9,63.2,174.2,50.9,157.4,50.9 M157.4,100.7c-4.8,0-8-2.9-8-23.6c0-20.7,3.2-23.6,8-23.6c4.8,0,8,2.9,8,23.6 C165.5,97.8,162.2,100.7,157.4,100.7"
         />
+
         <path
           d="M271.8,51.6c-2.8,0-5.7,0.2-8.5,0.2c-2.9,0-5.7-0.2-8.6-0.2c-1,0-1.7,0.3-1.7,1.2c0,1.9,5.9,0.7,5.9,7.8 c0,2.7-0.7,5.6-2.1,8.8L251.4,81l-8.2-19.7c-0.6-1.3-1.2-2.5-1.2-4.4c0-3.4,4-2.7,4-4.4c0-0.8-0.9-1.1-2.1-1.1 c-4.2,0-8.4,0.2-12.6,0.2c-4.2,0-8.4-0.2-12.6-0.2c-1.2,0-1.9,0.1-1.9,0.9c0,1.7,3,0.4,5,5.3l4.1,9.7l-6.6,13.1l-8.6-19.8 c-0.6-1.3-1.2-2.7-1.2-3.8c0-3.1,4-2.6,4-4.4c0-0.8-0.6-1-1.7-1c-4.7,0-9.2,0.2-13.5,0.2c-4.5,0-8.9-0.2-13.4-0.2 c-1.3,0-2,0.2-2,0.9c0,2.1,3.8,0,6.7,6.5l19.3,42.7c0.4,0.9,0.9,1.8,2,1.8c1.1,0,1.4-0.9,1.9-1.8l14.4-31.1l13.3,31.1 c0.4,0.9,0.9,1.8,2,1.8c1.1,0,1.5-0.9,1.9-1.8l18.4-38.8c4.8-10.1,10.8-7.9,10.8-10.1C273.8,52.1,273,51.6,271.8,51.6"
         />
+
         <path
           d="M310.1,50.9c-8,0-11.6,2.9-13.6,4.7V20.9c-19.2,7.3-25.9,4.4-25.9,6.9c0,2.1,6.9,0.7,6.9,6.3v68.2 c0,0.8,0.1,1.1,0.3,1.1c0.7,0,1-0.4,2.7-1.7l4.5-3.5c5,2.7,10.5,5.1,18.3,5.1c18.9,0,29.7-14.3,29.7-28.2 C333,58.9,323.8,50.9,310.1,50.9 M303.1,101.4c-3.8,0-6.6-2.1-6.6-5.8V58.8c0-0.9,1.1-1.7,2.9-1.7c7.8,0,13.3,8.6,13.3,24.5 C312.7,92.6,310.7,101.4,303.1,101.4"
         />
+
         <path
           d="M388.2,82.3c-0.9,0-1.3,1.2-3.1,3.5c-2.7,3.4-6.1,5.6-12.3,5.6c-8.4,0-14.3-6.5-15.3-17.9h31.1 c-0.2-15.2-11.1-22.6-23-22.6c-15.8,0-27.3,11.6-27.3,26.5c0,15.1,10.6,26,26.4,26c21.1,0,24.6-17.7,24.6-19.8 C389.2,82.7,388.8,82.3,388.2,82.3 M364.3,53.6c5.8,0,7,6.5,7,17.2h-14.1C357.2,60,358.5,53.6,364.3,53.6"
         />
@@ -887,23 +1066,29 @@
         >
           &times;
         </button>
+
         <div class="text-center">
           <img
             id="modal-speaker-img"
             alt="Speaker headshot"
             class="w-32 h-32 sm:w-48 sm:h-48 object-cover rounded-full mx-auto shadow-md border-4 border-white"
           />
+
           <h1
             id="modal-speaker-name"
             class="text-3xl sm:text-4xl font-bold font-serif text-gray-900 mt-6"
           ></h1>
+
           <p id="modal-speaker-company" class="text-lg text-gray-500 mt-1"></p>
+
           <p id="modal-speaker-country" class="text-lg text-gray-500"></p>
         </div>
+
         <p
           id="modal-speaker-bio"
           class="mt-8 text-gray-700 max-w-2xl mx-auto text-left whitespace-pre-wrap"
         ></p>
+
         <div
           id="modal-speaker-links"
           class="flex justify-center items-center gap-6 mt-6"
@@ -913,75 +1098,122 @@
 
     <script>
       // --- SPEAKER DATA ---
+
       const speakers = [
         {
           id: "peck-kem-low",
+
           name: "Peck Kem Low",
+
           company: "CHRO PSD",
+
           country: "Singapore",
+
           img: "images/peck.webp",
+
           bio: `Peck Kem is the Chief HR Officer and Advisor (Workforce Development) for Singapore's Public Service Division. She is responsible in enhancing HR capabilities across the public sector. Her prior role was Senior Director for Human Resource & Organisation Development at GAIN, managing HR and corporate administration globally.\n\nHer career spans quality engineering, manufacturing management, and VP of HR in the private sector with Tandon, Western Digital, Hewlett Packard, Agilent Technologies, and Avago Technologies. In the public sector, she was a Divisional Director at the Ministry of Manpower.\n\nHer diverse background offers a unique leadership perspective across Asian, European, and American cultures.\n\nPeck Kem is the first Asian CIPD Chartered Companion and was listed as one of the 100 Most HR influencers from Southeast Asia. She was also named as one of Asia's Top 50 HR Leaders in 2024 by SpeakIn Asia.\n\nIn addition, she currently serves as President of Singapore Human Resources Institute and President of the World Federation of People Management Associations.`,
+
           links: {
             linkedin: "https://linkedin.com/in/example",
+
             twitter: "https://twitter.com/example",
           },
         },
+
         {
           id: "marta-jonata",
+
           name: "Marta Jonatan",
+
           company: "Bank Index",
+
           country: "Indonesia",
+
           img: "images/marta.webp",
+
           bio: `Marta Jonatan is the Head of Human Capital at Bank Index Selindo, with over 20 years leading HR across banking, tech, and healthcare. She’s held senior roles at Microsoft, Barclays, Citibank, Lippo, and Siloam Hospitals, driving culture, talent, and transformation at scale. \nMarta is known for building future-ready organizations - reskilling teams, coaching leaders, and aligning people strategy with business growth.`,
+
           links: {
             linkedin: "https://id.linkedin.com/in/marta-jonatan-b21a171a",
           },
         },
+
         {
           id: "anthony-pangilinan",
+
           name: "Anthony Pangilinan",
+
           company: "Businessworks",
+
           country: "Philippines",
+
           img: "images/anthony.webp",
+
           bio: `Our speaker is a certified trainer and trainer of trainers in the Philippines. He has conducted hundreds of change management programs in over 50 countries over a span 30 years. He is a multi-platform communicator and facilitator, engaging in workshops, events, tri-media, social media, and publications to facilitate social, institutional and individual change - including a recently-released masterclass available for digital download entitled 'Maximizing Me'.\n\nHe holds an Executive Master in Business Administration from Tsinghua (Ching-Hwa) University in Beijing and INSEAD (In-Si-Yad) Business School based in Fontainebleau. He also holds an Executive Master in Change degree from INSEAD in Singapore. He is the host of CHANGE MAKERS and AT YOUR HOME which aired on Cignal and TV5’s One News Channel. A former world president of AIESEC International, the Founder and Chairman of the Master's Lighthouse Foundation, President of Called to Rescue Philippines, a finisher of the 6-world marathon majors and a father of five and husband to one, he is indeed one lifelong learner in leading others, and yourself, amidst a changing and often chaotic environment.`,
+
           links: {
             instagram: "https://instagram.com/anthonypangilinan",
+
             tiktok: "https://tiktok.com/@anthonypangilinan",
           },
         },
+
         {
           id: "niharika-chaturvedi",
+
           name: "Niharika Chaturvedi",
+
           company: "Singapore Fashion Council",
+
           country: "Singapore",
+
           img: "images/niharika.webp",
+
           bio: `Niharika Chaturvedi is a dynamic HR leader with extensive experience driving transformative change and fostering employee engagement across APAC and global markets. Her expertise spans HR Business Partnering, Talent Acquisition, and Employee Engagement, with a strong emphasis on creating agile processes that support continuous improvement and enhance overall business performance. As the HR Director at Singapore Fashion Council, she is working on elevating the team to the next level of growth and transformation while fostering a performance-driven culture of excellence.  Passionate about talent and organisational success, she is committed to aligning HR strategies with business goals, ensuring a collaborative, inclusive and resilient workplace that drives both employee development, satisfaction and business growth. \n\nPrior to SFC, Niharika spent over a decade in talent consulting with Organisations like Robert Walters, Allegis group and a founding member for Olofsson Consulting and  Regional HR leadership roles with Fintechs like Railsr and Matchmove. Niharika is an active mentor in talent community with NTU and HR fraternity with HR Next Gen.`,
+
           links: {
             linkedin: "https://www.linkedin.com/in/niharikachaturvedi/",
           },
         },
+
         {
           id: "benjamin-lowenkron",
+
           name: "Benjamin Lowenkron",
+
           company: "LCTCS",
+
           country: "USA",
+
           img: "images/ben.webp",
+
           bio: `A transformative leader in education, Benjamin S. Lowenkron currently serves as the Program Director of Distance and Digital Learning for Adult Education at the Louisiana Community and Technical College System (LCTCS). Ben held many positions in higher education over the past two decades, including Program Director of Teaching and Learning Technology,  Academic Student Support Coordinator, and Faculty Champion for the Center for Undergraduate Student Achievement (CUSA) at Baton Rouge Community College (BRCC). He joined BRCC in 2010 as an Adjunct in the Department of English and Humanities before accepting a full-time position as Instructor and then Assistant Professor. Born and raised in Virginia, he graduated from The College of William and Mary before moving to Louisiana, where he completed his graduate work at Louisiana State University. A published poet and the founder of the Delta Mouth Literary Festival, Ben still resides in Baton Rouge with his wife, Brooke, their two girls, and a wild but fun poodle puppy.`,
+
           links: {
             linkedin: "http://www.linkedin.com/in/benjamin-lowenkron-7184132b",
           },
         },
+
         {
           id: "adriana-ruiz",
+
           name: "Adriana Ruiz",
+
           company: "Agami | Innovation Made Easy",
+
           country: "USA",
+
           img: "images/adriana.webp",
+
           bio: `Founder of Agami | Expert in Design-Led Innovation\n\nWith over a decade of experience in design-led innovation, Adriana designs tools and systems that people can trust to create useful solutions and make a positive impact. Her work focuses on empowering individuals and organizations to build creative confidence and embrace innovation with clarity and purpose.\n\nAs the founder of Agami, she leads a startup that delivers innovation-as-a-service through customized learning programs and collaborative consulting projects. Her approach integrates design, strategy, and technology to support the evolution of business models and the development of resilient innovation ecosystems across Latin America.`,
+
           links: {
             instagram: "https://instagram.com/agamistudios",
+
             facebook: "https://facebook.com/agamistudios",
+
             linkedin: "https://www.linkedin.com/in/anairdaziur/",
+
             website: "https://www.agamistudios.com/",
           },
         },
@@ -989,110 +1221,263 @@
 
       document.addEventListener("DOMContentLoaded", () => {
         // --- HERO INTRO ANIMATION SCRIPT ---
+
         const introContainer = document.querySelector(
           ".intro-images-container"
         );
+
         if (introContainer) {
           const introImages = document.querySelectorAll(
             ".intro-images-container .img"
           );
+
           const heroContent = document.querySelector(".hero-content");
+
           const tl = new TimelineMax();
+
           tl.staggerFrom(
             introImages,
+
             0.8,
+
             { y: "60", opacity: 0, ease: Power3.easeOut },
+
             0.08,
+
             "+=0.5"
           )
+
             .to(
               introImages,
+
               0.5,
+
               { opacity: 0, scale: 0.9, ease: Power3.easeIn },
+
               "+=1.5"
             )
+
             .to(
               introContainer,
+
               0.8,
+
               { opacity: 0, ease: Expo.easeInOut },
+
               "-=0.4"
             )
+
             .to(heroContent, 1.2, { opacity: 1, ease: Power3.easeOut }, "-=0.6")
+
             .set(introContainer, { display: "none" });
         }
 
         // --- DYNAMICALLY CREATE SPEAKER CARDS ---
+
         const speakersGrid = document.getElementById("speakers-grid");
+
         if (speakersGrid) {
           speakers.forEach((speaker) => {
             const cardHTML = `
-                <div class="bg-white/80 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer group" data-speaker-id="${speaker.id}">
-                    <div class="relative h-80">
-                        <img src="${speaker.img}" alt="Photo of ${speaker.name}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 p-6">
-                            <h3 class="text-xl font-bold text-white">${speaker.name}</h3>
-                            <p class="text-white/80">${speaker.company}</p>
-                            <p class="text-white/80 font-medium">${speaker.country}</p>
-                        </div>
-                    </div>
-                </div>
-            `;
+
+
+
+                      <div class="bg-white/80 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer group" data-speaker-id="${speaker.id}">
+
+
+
+                          <div class="relative h-80">
+
+
+
+                              <img src="${speaker.img}" alt="Photo of ${speaker.name}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+
+
+
+                              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+
+
+                              <div class="absolute bottom-0 left-0 p-6">
+
+
+
+                                  <h3 class="text-xl font-bold text-white">${speaker.name}</h3>
+
+
+
+                                  <p class="text-white/80">${speaker.company}</p>
+
+
+
+                                  <p class="text-white/80 font-medium">${speaker.country}</p>
+
+
+
+                              </div>
+
+
+
+                          </div>
+
+
+
+                      </div>
+
+
+
+                  `;
+
             speakersGrid.innerHTML += cardHTML;
           });
         }
 
         // --- SPEAKER MODAL LOGIC ---
+
         const speakerModal = document.getElementById("speaker-modal");
+
         const closeModalBtn = document.getElementById("close-modal-btn");
+
         const speakersContainer = document.querySelector("#speakers");
 
         if (speakerModal && closeModalBtn && speakersContainer) {
           const modalImg = document.getElementById("modal-speaker-img");
+
           const modalName = document.getElementById("modal-speaker-name");
+
           const modalCompany = document.getElementById("modal-speaker-company");
+
           const modalCountry = document.getElementById("modal-speaker-country");
+
           const modalBio = document.getElementById("modal-speaker-bio");
+
           const modalLinks = document.getElementById("modal-speaker-links");
 
           const openModal = (speakerId) => {
             const speaker = speakers.find((s) => s.id === speakerId);
+
             if (speaker) {
               modalImg.src = speaker.img;
+
               modalName.textContent = speaker.name;
+
               modalCompany.textContent = speaker.company;
+
               modalCountry.textContent = speaker.country;
+
               modalBio.textContent = speaker.bio;
+
               modalLinks.innerHTML = ""; // Clear previous links
 
               const icons = {
-                linkedin: `<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>`,
-                twitter: `<svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`,
-                instagram: `<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.012 3.584-.07 4.85c-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.442c-3.117 0-3.486.01-4.71.066-2.827.128-4.143 1.44-4.27 4.27-.057 1.225-.066 1.595-.066 4.63s.01 3.405.066 4.63c.128 2.827 1.44 4.142 4.27 4.27 1.224.056 1.593.066 4.71.066s3.486-.01 4.71-.066c2.827-.128 4.143-1.44 4.27-4.27.056-1.225.066-1.595.066-4.63s-.01-3.405-.066-4.63c-.128-2.827-1.44-4.142-4.27-4.27C15.486 3.615 15.117 3.605 12 3.605zm0 5.48c-1.92 0-3.482 1.562-3.482 3.482s1.562 3.482 3.482 3.482 3.482-1.562 3.482-3.482-1.562-3.482-3.482-3.482zm0 5.52c-1.127 0-2.038-.91-2.038-2.038s.91-2.038 2.038-2.038 2.038.91 2.038 2.038-.91 2.038-2.038 2.038zm4.762-6.52c-.62 0-1.122.502-1.122 1.122s.502 1.122 1.122 1.122 1.122-.502 1.122-1.122-.502-1.122-1.122-1.122z"/></svg>`,
-                facebook: `<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>`,
-                tiktok: `<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-2.43.05-4.86-.95-6.69-2.81-1.77-1.8-2.55-4.16-2.4-6.61.12-2.04 1.03-3.96 2.4-5.36 1.17-1.17 2.6-1.9 4.13-2.32.12-.03.24-.05.36-.07.01 2.55.01 5.1-.01 7.64-.01.43-.03.86-.05 1.29-.07.97-.47 1.94-1.22 2.62-1.11 1-2.8 1.17-4.18.63-.49-.19-.94-.48-1.34-.82-.1-.08-.18-.18-.21-.3-.02-.08.02-.17.09-.23.08-.06.19-.07.29-.02.1.05.18.12.28.16.18.09.39.11.58.11.45 0 .88-.13 1.27-.38.39-.24.72-.56.97-.93.22-.33.39-.7.49-1.09.11-.42.17-.85.17-1.28.01-2.61.01-5.22.01-7.83 0-1.28.27-2.52.81-3.66.44-.93 1.1-1.75 1.9-2.42.4-.33.84-.6 1.31-.79.33-.13.68-.22 1.03-.26.08-.01.17-.01.25-.02z"/></svg>`,
-                website: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zM2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>`,
+                linkedin: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<path d="M44.4567 0H3.54333C2.60358 0 1.70232 0.373315 1.03782 1.03782C0.373315 1.70232 0 2.60358 0 3.54333V44.4567C0 45.3964 0.373315 46.2977 1.03782 46.9622C1.70232 47.6267 2.60358 48 3.54333 48H44.4567C45.3964 48 46.2977 47.6267 46.9622 46.9622C47.6267 46.2977 48 45.3964 48 44.4567V3.54333C48 2.60358 47.6267 1.70232 46.9622 1.03782C46.2977 0.373315 45.3964 0 44.4567 0ZM14.3067 40.89H7.09V17.9667H14.3067V40.89ZM10.6933 14.79C9.87473 14.7854 9.07583 14.5384 8.39747 14.0802C7.71911 13.622 7.19168 12.9731 6.88175 12.2154C6.57183 11.4577 6.4933 10.6252 6.65606 9.82291C6.81883 9.02063 7.2156 8.28455 7.79631 7.70756C8.37702 7.13057 9.11563 6.73853 9.91893 6.58092C10.7222 6.42331 11.5542 6.50719 12.3099 6.82197C13.0656 7.13675 13.7111 7.66833 14.1649 8.34962C14.6188 9.03092 14.8606 9.83138 14.86 10.65C14.8677 11.1981 14.765 11.7421 14.558 12.2496C14.351 12.7571 14.044 13.2178 13.6551 13.6041C13.2663 13.9905 12.8037 14.2946 12.2948 14.4983C11.786 14.702 11.2413 14.8012 10.6933 14.79ZM40.9067 40.91H33.6933V28.3867C33.6933 24.6933 32.1233 23.5533 30.0967 23.5533C27.9567 23.5533 25.8567 25.1667 25.8567 28.48V40.91H18.64V17.9833H25.58V21.16H25.6733C26.37 19.75 28.81 17.34 32.5333 17.34C36.56 17.34 40.91 19.73 40.91 26.73L40.9067 40.91Z" fill="#0A66C2"/>
+
+</svg>
+
+`,
+
+                twitter: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<path d="M36.6526 3.80782H43.3995L28.6594 20.6548L46 43.5798H32.4225L21.7881 29.6759L9.61989 43.5798H2.86886L18.6349 25.56L2 3.80782H15.9222L25.5348 16.5165L36.6526 3.80782ZM34.2846 39.5414H38.0232L13.8908 7.63408H9.87892L34.2846 39.5414Z" fill="black"/>
+
+</svg>
+
+`,
+
+                instagram: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<g clip-path="url(#clip0_17_27)">
+
+<path d="M24 4.32187C30.4125 4.32187 31.1719 4.35 33.6938 4.4625C36.0375 4.56562 37.3031 4.95938 38.1469 5.2875C39.2625 5.71875 40.0688 6.24375 40.9031 7.07812C41.7469 7.92188 42.2625 8.71875 42.6938 9.83438C43.0219 10.6781 43.4156 11.9531 43.5188 14.2875C43.6313 16.8187 43.6594 17.5781 43.6594 23.9813C43.6594 30.3938 43.6313 31.1531 43.5188 33.675C43.4156 36.0188 43.0219 37.2844 42.6938 38.1281C42.2625 39.2438 41.7375 40.05 40.9031 40.8844C40.0594 41.7281 39.2625 42.2438 38.1469 42.675C37.3031 43.0031 36.0281 43.3969 33.6938 43.5C31.1625 43.6125 30.4031 43.6406 24 43.6406C17.5875 43.6406 16.8281 43.6125 14.3063 43.5C11.9625 43.3969 10.6969 43.0031 9.85313 42.675C8.7375 42.2438 7.93125 41.7188 7.09688 40.8844C6.25313 40.0406 5.7375 39.2438 5.30625 38.1281C4.97813 37.2844 4.58438 36.0094 4.48125 33.675C4.36875 31.1438 4.34063 30.3844 4.34063 23.9813C4.34063 17.5688 4.36875 16.8094 4.48125 14.2875C4.58438 11.9437 4.97813 10.6781 5.30625 9.83438C5.7375 8.71875 6.2625 7.9125 7.09688 7.07812C7.94063 6.23438 8.7375 5.71875 9.85313 5.2875C10.6969 4.95938 11.9719 4.56562 14.3063 4.4625C16.8281 4.35 17.5875 4.32187 24 4.32187ZM24 0C17.4844 0 16.6688 0.028125 14.1094 0.140625C11.5594 0.253125 9.80625 0.665625 8.2875 1.25625C6.70312 1.875 5.3625 2.69062 4.03125 4.03125C2.69063 5.3625 1.875 6.70313 1.25625 8.27813C0.665625 9.80625 0.253125 11.55 0.140625 14.1C0.028125 16.6687 0 17.4844 0 24C0 30.5156 0.028125 31.3312 0.140625 33.8906C0.253125 36.4406 0.665625 38.1938 1.25625 39.7125C1.875 41.2969 2.69063 42.6375 4.03125 43.9688C5.3625 45.3 6.70313 46.125 8.27813 46.7344C9.80625 47.325 11.55 47.7375 14.1 47.85C16.6594 47.9625 17.475 47.9906 23.9906 47.9906C30.5063 47.9906 31.3219 47.9625 33.8813 47.85C36.4313 47.7375 38.1844 47.325 39.7031 46.7344C41.2781 46.125 42.6188 45.3 43.95 43.9688C45.2812 42.6375 46.1063 41.2969 46.7156 39.7219C47.3063 38.1938 47.7188 36.45 47.8313 33.9C47.9438 31.3406 47.9719 30.525 47.9719 24.0094C47.9719 17.4938 47.9438 16.6781 47.8313 14.1188C47.7188 11.5688 47.3063 9.81563 46.7156 8.29688C46.125 6.70312 45.3094 5.3625 43.9688 4.03125C42.6375 2.7 41.2969 1.875 39.7219 1.26562C38.1938 0.675 36.45 0.2625 33.9 0.15C31.3313 0.028125 30.5156 0 24 0Z" fill="#000100"/>
+
+<path d="M24 11.6719C17.1938 11.6719 11.6719 17.1938 11.6719 24C11.6719 30.8062 17.1938 36.3281 24 36.3281C30.8062 36.3281 36.3281 30.8062 36.3281 24C36.3281 17.1938 30.8062 11.6719 24 11.6719ZM24 31.9969C19.5844 31.9969 16.0031 28.4156 16.0031 24C16.0031 19.5844 19.5844 16.0031 24 16.0031C28.4156 16.0031 31.9969 19.5844 31.9969 24C31.9969 28.4156 28.4156 31.9969 24 31.9969Z" fill="#000100"/>
+
+<path d="M39.6937 11.1844C39.6937 12.7782 38.4 14.0625 36.8156 14.0625C35.2219 14.0625 33.9375 12.7688 33.9375 11.1844C33.9375 9.59065 35.2313 8.30627 36.8156 8.30627C38.4 8.30627 39.6937 9.60003 39.6937 11.1844Z" fill="#000100"/>
+
+</g>
+
+<defs>
+
+<clipPath id="clip0_17_27">
+
+<rect width="48" height="48" fill="white"/>
+
+</clipPath>
+
+</defs>
+
+</svg>
+
+`,
+
+                facebook: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <g clip-path="url(#clip0_17_24)">
+
+      <path d="M48 24C48 10.7453 37.2547 0 24 0C10.7453 0 0 10.7453 0 24C0 35.255 7.74912 44.6995 18.2026 47.2934V31.3344H13.2538V24H18.2026V20.8397C18.2026 12.671 21.8995 8.8848 29.9194 8.8848C31.44 8.8848 34.0637 9.18336 35.137 9.48096V16.129C34.5706 16.0694 33.5866 16.0397 32.3645 16.0397C28.4294 16.0397 26.9088 17.5306 26.9088 21.4061V24H34.7482L33.4013 31.3344H26.9088V47.8243C38.7926 46.3891 48.001 36.2707 48.001 24H48Z" fill="#0866FF"/>
+
+      <path d="M33.4003 31.3344L34.7472 24H26.9078V21.4061C26.9078 17.5306 28.4285 16.0397 32.3635 16.0397C33.5856 16.0397 34.5696 16.0694 35.136 16.129V9.48096C34.0627 9.1824 31.439 8.8848 29.9184 8.8848C21.8986 8.8848 18.2016 12.671 18.2016 20.8397V24H13.2528V31.3344H18.2016V47.2934C20.0582 47.7542 22.0003 48 23.999 48C24.983 48 25.9536 47.9395 26.9069 47.8243V31.3344H33.3994H33.4003Z" fill="white"/>
+
+      </g>
+
+      <defs>
+
+      <clipPath id="clip0_17_24">
+
+      <rect width="48" height="48" fill="white"/>
+
+      </clipPath>
+
+      </defs>
+
+      </svg>`,
+
+                tiktok: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<path d="M34.353 17.327C37.4397 19.5413 41.2211 20.8442 45.3051 20.8442V12.9573C44.5322 12.9574 43.7613 12.8765 43.0051 12.7158V18.9239C38.9214 18.9239 35.1405 17.621 32.053 15.4068V31.5018C32.053 39.5533 25.5492 46.0799 17.5268 46.0799C14.5334 46.0799 11.7512 45.1717 9.44006 43.6141C12.0779 46.3209 15.7565 48 19.8263 48C27.8492 48 34.3534 41.4734 34.3534 33.4216V17.327H34.353ZM37.1904 9.37002C35.6129 7.64048 34.5772 5.40538 34.353 2.93438V1.91995H32.1735C32.7221 5.06059 34.5934 7.74377 37.1904 9.37002ZM14.5142 37.4356C13.6329 36.2759 13.1566 34.8572 13.1587 33.3985C13.1587 29.7161 16.1336 26.7303 19.8037 26.7303C20.4877 26.7301 21.1675 26.8352 21.8194 27.0428V18.9796C21.0576 18.8748 20.2888 18.8303 19.5203 18.8466V25.1226C18.868 24.9151 18.1878 24.8096 17.5037 24.8103C13.8335 24.8103 10.8589 27.7958 10.8589 31.4787C10.8589 34.0828 12.3458 36.3374 14.5142 37.4356Z" fill="#FF004F"/>
+
+<path d="M32.0529 15.4067C35.1404 17.6209 38.9213 18.9237 43.005 18.9237V12.7156C40.7255 12.2283 38.7075 11.0328 37.1903 9.37002C34.5931 7.74361 32.722 5.06043 32.1733 1.91995H26.4482V33.4213C26.4352 37.0937 23.4655 40.0673 19.8032 40.0673C17.6451 40.0673 15.7279 39.0349 14.5136 37.4356C12.3454 36.3374 10.8585 34.0827 10.8585 31.4789C10.8585 27.7963 13.8331 24.8105 17.5032 24.8105C18.2064 24.8105 18.8842 24.9204 19.5199 25.1228V18.8468C11.6384 19.0102 5.2998 25.473 5.2998 33.4214C5.2998 37.3892 6.87827 40.9861 9.44013 43.6143C11.7513 45.1717 14.5335 46.08 17.5268 46.08C25.5494 46.08 32.0531 39.5531 32.0531 31.5018V15.4067H32.0529Z" fill="black"/>
+
+<path d="M43.0051 12.7156V11.037C40.9495 11.0401 38.9343 10.4624 37.1903 9.36987C38.7342 11.0661 40.7671 12.2357 43.0051 12.7156ZM32.1734 1.91997C32.1211 1.61982 32.0809 1.3177 32.053 1.01443V0H24.148V31.5016C24.1354 35.1735 21.1658 38.1471 17.5033 38.1471C16.428 38.1471 15.4128 37.891 14.5137 37.4358C15.7279 39.0349 17.6452 40.0671 19.8033 40.0671C23.4652 40.0671 26.4354 37.0938 26.4482 33.4214V1.91997H32.1734ZM19.5203 18.8468V17.0598C18.8598 16.9692 18.1938 16.9237 17.5271 16.924C9.50383 16.9239 3 23.4508 3 31.5016C3 36.5491 5.55612 40.9974 9.44034 43.614C6.87848 40.986 5.30002 37.3889 5.30002 33.4213C5.30002 25.473 11.6385 19.0102 19.5203 18.8468Z" fill="#00F2EA"/>
+
+</svg>
+
+`,
+
+                website: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`,
               };
 
               Object.entries(speaker.links).forEach(([key, value]) => {
                 const platformName = key.charAt(0).toUpperCase() + key.slice(1);
+
                 const iconSvg = icons[key.toLowerCase()];
 
                 if (iconSvg) {
                   const link = document.createElement("a");
+
                   link.href = value;
+
                   link.target = "_blank";
+
                   link.rel = "noopener noreferrer";
+
                   link.setAttribute(
                     "aria-label",
+
                     `Visit ${speaker.name}'s ${platformName} profile`
                   );
+
                   link.className =
                     "text-gray-500 hover:text-gray-800 transition-colors";
+
                   link.innerHTML = iconSvg;
+
                   modalLinks.appendChild(link);
                 }
               });
+
               speakerModal.classList.remove("hidden");
             }
           };
@@ -1103,17 +1488,20 @@
 
           speakersContainer.addEventListener("click", (e) => {
             const card = e.target.closest("[data-speaker-id]");
+
             if (card) {
               openModal(card.dataset.speakerId);
             }
           });
 
           closeModalBtn.addEventListener("click", closeModal);
+
           speakerModal.addEventListener("click", (e) => {
             if (e.target === speakerModal) {
               closeModal();
             }
           });
+
           document.addEventListener("keydown", (e) => {
             if (
               e.key === "Escape" &&
