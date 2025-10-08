@@ -100,8 +100,8 @@
         padding: 1rem;
       }
       .img {
-        width: 180px;
-        height: 200px;
+        width: 100px;
+        height: 180px;
         background-size: cover;
         background-position: 50% 50%;
         border-radius: 8px;
@@ -136,6 +136,12 @@
       }
       .img-7 {
         background-image: url(images/rana.webp);
+      }
+      .img-8 {
+        background-image: url(images/steve.png);
+      }
+      .img-9 {
+        background-image: url(images/jim.png);
       }
       @keyframes gradient-move {
         to {
@@ -348,6 +354,8 @@
           <div class="img img-5"></div>
           <div class="img img-6"></div>
           <div class="img img-7"></div>
+          <div class="img img-8"></div>
+          <div class="img img-9"></div>
         </div>
       </div>
       <div class="relative z-10 hero-content">
@@ -416,6 +424,25 @@
           ></div>
         </div>
       </section>
+
+      <section id="hosts" class="py-16 md:py-24 bg-white/70">
+        <div class="container mx-auto px-6 max-w-screen-xl">
+          <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+              Meet the Hosts
+            </h2>
+            <p class="mt-4 text-lg text-gray-600">
+              Guiding you through the Global and Americas Conferences.
+            </p>
+          </div>
+
+          <div
+            id="hosts-grid"
+            class="grid grid-cols-1 sm:grid-cols-2 gap-8"
+          ></div>
+        </div>
+      </section>
+
       <section id="agenda" class="py-16 md:py-24">
         <div class="container mx-auto px-6 max-w-screen-xl">
           <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
@@ -849,6 +876,7 @@
         />
       </symbol>
     </svg>
+
     <div
       id="speaker-modal"
       class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50"
@@ -891,7 +919,75 @@
         ></div>
       </div>
     </div>
+
+    <div
+      id="host-modal"
+      class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50"
+    >
+      <div
+        class="max-w-3xl w-full bg-white shadow-lg rounded-xl p-6 sm:p-8 relative animate-fade-in-up max-h-[90vh] overflow-y-auto"
+      >
+        <button
+          id="close-host-modal-btn"
+          class="absolute top-3 right-4 text-4xl font-light text-gray-500 hover:text-gray-800 z-10"
+        >
+          &times;
+        </button>
+        <div class="text-center">
+          <img
+            id="modal-host-img"
+            alt="Host headshot"
+            class="w-28 h-28 sm:w-36 sm:h-36 object-cover rounded-full mx-auto shadow-md border-4 border-white"
+          />
+          <h1
+            id="modal-host-name"
+            class="text-2xl sm:text-3xl font-bold font-serif text-gray-900 mt-4"
+          ></h1>
+          <p
+            id="modal-host-company"
+            class="text-base sm:text-lg text-gray-500 mt-1"
+          ></p>
+          <p
+            id="modal-host-country"
+            class="text-base sm:text-lg text-gray-500"
+          ></p>
+        </div>
+        <p
+          id="modal-host-bio"
+          class="mt-6 sm:mt-8 text-sm sm:text-base text-gray-700 max-w-2xl mx-auto text-left whitespace-pre-wrap"
+        ></p>
+        <div
+          id="modal-host-links"
+          class="flex justify-center items-center gap-6 mt-6"
+        ></div>
+      </div>
+    </div>
+
     <script>
+      const hosts = [
+        {
+          id: "soyoung-kang",
+          name: "So-Young Kang",
+          company: "Founder, CEO and Chairman, Gnowbe",
+          country: "Global Conference Host",
+          img: "images/soyoungkang.png",
+          bio: `So-Young is a globally sought after speaker and thought leader from World Economic Forum Davos to Drucker Forum. She is a transformation designer who helps organizations and individuals stay human in an increasingly AI-powered digital world. Her work over the last 25 years focuses on better aligning purpose, values and ethics across business, tech, education and government. She has done this by founding Gnowbe, an AI-powered software platform that humanizes how we train, learn and engage 1000x faster and more effectively, and Awaken Group, a human-centered transformation design firm that catalyzes growth for value creation.\n\nSo-Young is the author of 'Inside Out', global speaker and thought leader where she regularly speaks and writes about tech, values, humanity and the future of human development at places including the World Economic Forum as a Young Global Leader since 2014, Forbes, Davos, TEDx, Huffington Post, and Drucker Forum. So-Young holds a BA with Honors from the University of Pennsylvania and an MBA from Harvard University.`,
+          links: {
+            linkedin: "https://www.linkedin.com/in/soyoungkang/",
+          },
+        },
+        {
+          id: "nicola-murphy",
+          name: "Nicola Murphy",
+          company: "Head of Microlearning Instructional Design | Gnowbe",
+          country: "Americas Conference Host",
+          img: "images/nicola.png",
+          bio: `Nicola Murphy has an extensive background in education, curriculum development and teacher training and works for Gnowbe as the Head of Microlearning Instructional Design and Success Global Lead.\n\nOriginally from New Zealand, Nicola is passionate about equipping leaders, trainers, teachers and content creators with innovative strategies and tech solutions to maximize learner engagement, knowledge retention, performance and impact, both online and in person.`,
+          links: {
+            linkedin: "https://www.linkedin.com/in/nicolamurphy/",
+          },
+        },
+      ];
       const speakers = [
         {
           id: "peck-kem-low",
@@ -911,14 +1007,8 @@
           company: "Bank Index",
           country: "Indonesia",
           img: "images/marta.webp",
-          bio: `Marta Jonatan is a highly accomplished and strategic human capital leader with over three decades of experience steering transformative HR functions across the banking, technology, and healthcare sectors. As the current Head of Human Capital at Bank Index Selindo, she is responsible for driving the organization's talent strategy to foster a culture of excellence and support sustainable business growth.
-Throughout her distinguished career, Marta has held pivotal leadership positions in some of the world's most reputable multinational corporations. She served as the Human Resource Director for Microsoft Indonesia, and held multiple senior Head of HR roles at financial giants including Bank Danamon, Barclays, and Citibank, where her responsibilities spanned both Indonesia and the Philippines. Her extensive leadership experience also includes serving as a Director for major Indonesian conglomerates such as PT Lippo Karawaci, Tbk, PT Siloam Hospitals International, and Multipolar Corp.
+          bio: `Marta Jonatan is a highly accomplished and strategic human capital leader with over three decades of experience steering transformative HR functions across the banking, technology, and healthcare sectors. As the current Head of Human Capital at Bank Index Selindo, she is responsible for driving the organization's talent strategy to foster a culture of excellence and support sustainable business growth.\n\nThroughout her distinguished career, Marta has held pivotal leadership positions in some of the world's most reputable multinational corporations. She served as the Human Resource Director for Microsoft Indonesia, and held multiple senior Head of HR roles at financial giants including Bank Danamon, Barclays, and Citibank, where her responsibilities spanned both Indonesia and the Philippines. Her extensive leadership experience also includes serving as a Director for major Indonesian conglomerates such as PT Lippo Karawaci, Tbk, PT Siloam Hospitals International, and Multipolar Corp. \n\nThis diverse, cross-industry background has equipped Marta with a unique and holistic perspective on leadership and talent management, allowing her to implement best practices from various sectors to build robust and agile organizations. Her expertise encompasses strategic business partnering, organizational transformation, talent management, and developing high-performance cultures that align directly with core business objectives. \n\nA dedicated lifelong learner, Marta is committed to continuous development. She holds an International Executive Master of Management (MBA equivalent) from Universitas Pelita Harapan and has completed a Professional Development Program in Managing Innovation and Managing Change at Harvard University.`,
 
-This diverse, cross-industry background has equipped Marta with a unique and holistic perspective on leadership and talent management, allowing her to implement best practices from various sectors to build robust and agile organizations. Her expertise encompasses strategic business partnering, organizational transformation, talent management, and developing high-performance cultures that align directly with core business objectives.
-
-A dedicated lifelong learner, Marta is committed to continuous development. She holds an International Executive Master of Management (MBA equivalent) from Universitas Pelita Harapan and has completed a Professional Development Program in Managing Innovation and Managing Change at Harvard University.
-
-`,
           links: {
             linkedin: "https://id.linkedin.com/in/marta-jonatan-b21a171a",
           },
@@ -935,6 +1025,34 @@ A dedicated lifelong learner, Marta is committed to continuous development. She 
             tiktok: "https://tiktok.com/@anthonypangilinan",
           },
         },
+
+        {
+          id: "steve-shorey",
+          name: "Steve Shorey",
+          company: "Cato Networks",
+          country: "Philippines",
+          img: "images/steve.png",
+          bio: `Steve Shorey is the Head of World-Wide Sales Enablement at Cato Networks.  With over two decades of experience in Enablement and Sales Capability, his focus is on collaboratively building strategic visions and execution strategies to empower sales professionals across the world. With expertise in sales effectiveness, analytical skills, and business analysis, he is committed to driving impactful onboarding programs and fostering a culture of mentorship and continuous learning.`,
+          links: {
+            linkedin: "https://www.linkedin.com/in/steveshorey/",
+          },
+        },
+
+        {
+          id: "jim-tam",
+          name: "Jim Tam",
+          company: "Cato Networks",
+          country: "Philippines",
+          img: "images/jim.png",
+          bio: `With more than two and a half decades of experience, Jim Tam is a proven leader in driving business growth and building strong client relationships across a wide range of industries—including financial services, technology, travel, and security.
+As a Client Executive at Gartner, Jim leverages his extensive expertise in the financial services sector, working closely with clients to ensure Gartner’s world-class insights and services effectively support their business strategies.
+Jim began his career at Citigroup, where he quickly advanced to lead sales for Citi’s major financial centers and its consumer credit card division. This early success in client-centered sales leadership laid the foundation for subsequent executive roles at global organizations such as Hertz Corporation, G4S, Kastle Systems, Keystone Partners, and Korn Ferry. \n\nA highlight of his career was his tenure as Chief Revenue Officer at Gnowbe, a global tech firm, where he successfully led sales and marketing operations across four continents. \n\nJim earned his undergraduate degree from the NYU Stern School of Business and his MBA from Dowling College. A lifelong learner, he has held professional licenses in finance and insurance and is a Lean Six Sigma Green Belt. \n\nWhen he’s not helping clients, Jim enjoys traveling, attending live performances, and following his favorite competitive sports.`,
+
+          links: {
+            linkedin: "https://www.linkedin.com/in/jimtam/",
+          },
+        },
+
         {
           id: "niharika-chaturvedi",
           name: "Niharika Chaturvedi",
@@ -963,7 +1081,7 @@ A dedicated lifelong learner, Marta is committed to continuous development. She 
           company: "Agami | Innovation Made Easy",
           country: "USA",
           img: "images/adriana.webp",
-          bio: `Founder of Agami | Expert in Design-Led Innovation\n\nWith over a decade of experience in design-led innovation, Adriana designs tools and systems that people can trust to create useful solutions and make a positive impact. Her work focuses on empowering individuals and organizations to build creative confidence and embrace innovation with clarity and purpose.\n\nAs the founder of Agami, she leads a startup that delivers innovation-as-a-service through customized learning programs and collaborative consulting projects. Her approach integrates design, strategy, and technology to support the evolution of business models and the development of resilient innovation ecosystems across Latin America.`,
+          bio: `With over a decade of experience in design-led innovation, Adriana designs tools and systems that people can trust to create useful solutions and make a positive impact. Her work focuses on empowering individuals and organizations to build creative confidence and embrace innovation with clarity and purpose.\n\nAs the founder of Agami, she leads a startup that delivers innovation-as-a-service through customized learning programs and collaborative consulting projects. Her approach integrates design, strategy, and technology to support the evolution of business models and the development of resilient innovation ecosystems across Latin America.`,
           links: {
             instagram: "https://instagram.com/agamistudios",
             facebook: "https://facebook.com/agamistudios",
@@ -983,6 +1101,16 @@ A dedicated lifelong learner, Marta is committed to continuous development. She 
           },
         },
       ];
+
+      const socialIcons = {
+        linkedin: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.4567 0H3.54333C2.60358 0 1.70232 0.373315 1.03782 1.03782C0.373315 1.70232 0 2.60358 0 3.54333V44.4567C0 45.3964 0.373315 46.2977 1.03782 46.9622C1.70232 47.6267 2.60358 48 3.54333 48H44.4567C45.3964 48 46.2977 47.6267 46.9622 46.9622C47.6267 46.2977 48 45.3964 48 44.4567V3.54333C48 2.60358 47.6267 1.70232 46.9622 1.03782C46.2977 0.373315 45.3964 0 44.4567 0ZM14.3067 40.89H7.09V17.9667H14.3067V40.89ZM10.6933 14.79C9.87473 14.7854 9.07583 14.5384 8.39747 14.0802C7.71911 13.622 7.19168 12.9731 6.88175 12.2154C6.57183 11.4577 6.4933 10.6252 6.65606 9.82291C6.81883 9.02063 7.2156 8.28455 7.79631 7.70756C8.37702 7.13057 9.11563 6.73853 9.91893 6.58092C10.7222 6.42331 11.5542 6.50719 12.3099 6.82197C13.0656 7.13675 13.7111 7.66833 14.1649 8.34962C14.6188 9.03092 14.8606 9.83138 14.86 10.65C14.8677 11.1981 14.765 11.7421 14.558 12.2496C14.351 12.7571 14.044 13.2178 13.6551 13.6041C13.2663 13.9905 12.8037 14.2946 12.2948 14.4983C11.786 14.702 11.2413 14.8012 10.6933 14.79ZM40.9067 40.91H33.6933V28.3867C33.6933 24.6933 32.1233 23.5533 30.0967 23.5533C27.9567 23.5533 25.8567 25.1667 25.8567 28.48V40.91H18.64V17.9833H25.58V21.16H25.6733C26.37 19.75 28.81 17.34 32.5333 17.34C36.56 17.34 40.91 19.73 40.91 26.73L40.9067 40.91Z" fill="#0A66C2"/></svg>`,
+        twitter: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.6526 3.80782H43.3995L28.6594 20.6548L46 43.5798H32.4225L21.7881 29.6759L9.61989 43.5798H2.86886L18.6349 25.56L2 3.80782H15.9222L25.5348 16.5165L36.6526 3.80782ZM34.2846 39.5414H38.0232L13.8908 7.63408H9.87892L34.2846 39.5414Z" fill="black"/></svg>`,
+        instagram: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_17_27)"><path d="M24 4.32187C30.4125 4.32187 31.1719 4.35 33.6938 4.4625C36.0375 4.56562 37.3031 4.95938 38.1469 5.2875C39.2625 5.71875 40.0688 6.24375 40.9031 7.07812C41.7469 7.92188 42.2625 8.71875 42.6938 9.83438C43.0219 10.6781 43.4156 11.9531 43.5188 14.2875C43.6313 16.8187 43.6594 17.5781 43.6594 23.9813C43.6594 30.3938 43.6313 31.1531 43.5188 33.675C43.4156 36.0188 43.0219 37.2844 42.6938 38.1281C42.2625 39.2438 41.7375 40.05 40.9031 40.8844C40.0594 41.7281 39.2625 42.2438 38.1469 42.675C37.3031 43.0031 36.0281 43.3969 33.6938 43.5C31.1625 43.6125 30.4031 43.6406 24 43.6406C17.5875 43.6406 16.8281 43.6125 14.3063 43.5C11.9625 43.3969 10.6969 43.0031 9.85313 42.675C8.7375 42.2438 7.93125 41.7188 7.09688 40.8844C6.25313 40.0406 5.7375 39.2438 5.30625 38.1281C4.97813 37.2844 4.58438 36.0094 4.48125 33.675C4.36875 31.1438 4.34063 30.3844 4.34063 23.9813C4.34063 17.5688 4.36875 16.8094 4.48125 14.2875C4.58438 11.9437 4.97813 10.6781 5.30625 9.83438C5.7375 8.71875 6.2625 7.9125 7.09688 7.07812C7.94063 6.23438 8.7375 5.71875 9.85313 5.2875C10.6969 4.95938 11.9719 4.56562 14.3063 4.4625C16.8281 4.35 17.5875 4.32187 24 4.32187ZM24 0C17.4844 0 16.6688 0.028125 14.1094 0.140625C11.5594 0.253125 9.80625 0.665625 8.2875 1.25625C6.70312 1.875 5.3625 2.69062 4.03125 4.03125C2.69063 5.3625 1.875 6.70313 1.25625 8.27813C0.665625 9.80625 0.253125 11.55 0.140625 14.1C0.028125 16.6687 0 17.4844 0 24C0 30.5156 0.028125 31.3312 0.140625 33.8906C0.253125 36.4406 0.665625 38.1938 1.25625 39.7125C1.875 41.2969 2.69063 42.6375 4.03125 43.9688C5.3625 45.3 6.70313 46.125 8.27813 46.7344C9.80625 47.325 11.55 47.7375 14.1 47.85C16.6594 47.9625 17.475 47.9906 23.9906 47.9906C30.5063 47.9906 31.3219 47.9625 33.8813 47.85C36.4313 47.7375 38.1844 47.325 39.7031 46.7344C41.2781 46.125 42.6188 45.3 43.95 43.9688C45.2812 42.6375 46.1063 41.2969 46.7156 39.7219C47.3063 38.1938 47.7188 36.45 47.8313 33.9C47.9438 31.3406 47.9719 30.525 47.9719 24.0094C47.9719 17.4938 47.9438 16.6781 47.8313 14.1188C47.7188 11.5688 47.3063 9.81563 46.7156 8.29688C46.125 6.70312 45.3094 5.3625 43.9688 4.03125C42.6375 2.7 41.2969 1.875 39.7219 1.26562C38.1938 0.675 36.45 0.2625 33.9 0.15C31.3313 0.028125 30.5156 0 24 0Z" fill="#000100"/><path d="M24 11.6719C17.1938 11.6719 11.6719 17.1938 11.6719 24C11.6719 30.8062 17.1938 36.3281 24 36.3281C30.8062 36.3281 36.3281 30.8062 36.3281 24C36.3281 17.1938 30.8062 11.6719 24 11.6719ZM24 31.9969C19.5844 31.9969 16.0031 28.4156 16.0031 24C16.0031 19.5844 19.5844 16.0031 24 16.0031C28.4156 16.0031 31.9969 19.5844 31.9969 24C31.9969 28.4156 28.4156 31.9969 24 31.9969Z" fill="#000100"/><path d="M39.6937 11.1844C39.6937 12.7782 38.4 14.0625 36.8156 14.0625C35.2219 14.0625 33.9375 12.7688 33.9375 11.1844C33.9375 9.59065 35.2313 8.30627 36.8156 8.30627C38.4 8.30627 39.6937 9.60003 39.6937 11.1844Z" fill="#000100"/></g><defs><clipPath id="clip0_17_27"><rect width="48" height="48" fill="white"/></clipPath></defs></svg>`,
+        facebook: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_17_24)"><path d="M48 24C48 10.7453 37.2547 0 24 0C10.7453 0 0 10.7453 0 24C0 35.255 7.74912 44.6995 18.2026 47.2934V31.3344H13.2538V24H18.2026V20.8397C18.2026 12.671 21.8995 8.8848 29.9194 8.8848C31.44 8.8848 34.0637 9.18336 35.137 9.48096V16.129C34.5706 16.0694 33.5866 16.0397 32.3645 16.0397C28.4294 16.0397 26.9088 17.5306 26.9088 21.4061V24H34.7482L33.4013 31.3344H26.9088V47.8243C38.7926 46.3891 48.001 36.2707 48.001 24H48Z" fill="#0866FF"/><path d="M33.4003 31.3344L34.7472 24H26.9078V21.4061C26.9078 17.5306 28.4285 16.0397 32.3635 16.0397C33.5856 16.0397 34.5696 16.0694 35.136 16.129V9.48096C34.0627 9.1824 31.439 8.8848 29.9184 8.8848C21.8986 8.8848 18.2016 12.671 18.2016 20.8397V24H13.2528V31.3344H18.2016V47.2934C20.0582 47.7542 22.0003 48 23.999 48C24.983 48 25.9536 47.9395 26.9069 47.8243V31.3344H33.3994H33.4003Z" fill="white"/></g><defs><clipPath id="clip0_17_24"><rect width="48" height="48" fill="white"/></clipPath></defs></svg>`,
+        tiktok: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M34.353 17.327C37.4397 19.5413 41.2211 20.8442 45.3051 20.8442V12.9573C44.5322 12.9574 43.7613 12.8765 43.0051 12.7158V18.9239C38.9214 18.9239 35.1405 17.621 32.053 15.4068V31.5018C32.053 39.5533 25.5492 46.0799 17.5268 46.0799C14.5334 46.0799 11.7512 45.1717 9.44006 43.6141C12.0779 46.3209 15.7565 48 19.8263 48C27.8492 48 34.3534 41.4734 34.3534 33.4216V17.327H34.353ZM37.1904 9.37002C35.6129 7.64048 34.5772 5.40538 34.353 2.93438V1.91995H32.1735C32.7221 5.06059 34.5934 7.74377 37.1904 9.37002ZM14.5142 37.4356C13.6329 36.2759 13.1566 34.8572 13.1587 33.3985C13.1587 29.7161 16.1336 26.7303 19.8037 26.7303C20.4877 26.7301 21.1675 26.8352 21.8194 27.0428V18.9796C21.0576 18.8748 20.2888 18.8303 19.5203 18.8466V25.1226C18.868 24.9151 18.1878 24.8096 17.5037 24.8103C13.8335 24.8103 10.8589 27.7958 10.8589 31.4787C10.8589 34.0828 12.3458 36.3374 14.5142 37.4356Z" fill="#FF004F"/><path d="M32.0529 15.4067C35.1404 17.6209 38.9213 18.9237 43.005 18.9237V12.7156C40.7255 12.2283 38.7075 11.0328 37.1903 9.37002C34.5931 7.74361 32.722 5.06043 32.1733 1.91995H26.4482V33.4213C26.4352 37.0937 23.4655 40.0673 19.8032 40.0673C17.6451 40.0673 15.7279 39.0349 14.5136 37.4356C12.3454 36.3374 10.8585 34.0827 10.8585 31.4789C10.8585 27.7963 13.8331 24.8105 17.5032 24.8105C18.2064 24.8105 18.8842 24.9204 19.5199 25.1228V18.8468C11.6384 19.0102 5.2998 25.473 5.2998 33.4214C5.2998 37.3892 6.87827 40.9861 9.44013 43.6143C11.7513 45.1717 14.5335 46.08 17.5268 46.08C25.5494 46.08 32.0531 39.5531 32.0531 31.5018V15.4067H32.0529Z" fill="black"/><path d="M43.0051 12.7156V11.037C40.9495 11.0401 38.9343 10.4624 37.1903 9.36987C38.7342 11.0661 40.7671 12.2357 43.0051 12.7156ZM32.1734 1.91997C32.1211 1.61982 32.0809 1.3177 32.053 1.01443V0H24.148V31.5016C24.1354 35.1735 21.1658 38.1471 17.5033 38.1471C16.428 38.1471 15.4128 37.891 14.5137 37.4358C15.7279 39.0349 17.6452 40.0671 19.8033 40.0671C23.4652 40.0671 26.4354 37.0938 26.4482 33.4214V1.91997H32.1734ZM19.5203 18.8468V17.0598C18.8598 16.9692 18.1938 16.9237 17.5271 16.924C9.50383 16.9239 3 23.4508 3 31.5016C3 36.5491 5.55612 40.9974 9.44034 43.614C6.87848 40.986 5.30002 37.3889 5.30002 33.4213C5.30002 25.473 11.6385 19.0102 19.5203 18.8468Z" fill="#00F2EA"/></svg>`,
+        website: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`,
+      };
+
       document.addEventListener("DOMContentLoaded", () => {
         // --- HERO INTRO ANIMATION SCRIPT ---
         const introContainer = document.querySelector(
@@ -1016,42 +1144,55 @@ A dedicated lifelong learner, Marta is committed to continuous development. She 
             .to(heroContent, 1.2, { opacity: 1, ease: Power3.easeOut }, "-=0.6")
             .set(introContainer, { display: "none" });
         }
+
         // --- DYNAMICALLY CREATE SPEAKER CARDS ---
         const speakersGrid = document.getElementById("speakers-grid");
         if (speakersGrid) {
           speakers.forEach((speaker) => {
             const cardHTML = `
-
-                      <div class="bg-white/80 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer group" data-speaker-id="${speaker.id}">
-
-                          <div class="relative h-80">
-
-                              <img src="${speaker.img}" alt="Photo of ${speaker.name}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
-
-                              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-
-                              <div class="absolute bottom-0 left-0 p-6">
-
-                                  <h3 class="text-xl font-bold text-white">${speaker.name}</h3>
-
-                                  <p class="text-white/80">${speaker.company}</p>
-
-                                  <p class="text-white/80 font-medium">${speaker.country}</p>
-
-                              </div>
-
-                          </div>
-
+              <div class="bg-white/80 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer group" data-speaker-id="${speaker.id}">
+                  <div class="relative h-80">
+                      <img src="${speaker.img}" alt="Photo of ${speaker.name}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                      <div class="absolute bottom-0 left-0 p-6">
+                          <h3 class="text-xl font-bold text-white">${speaker.name}</h3>
+                          <p class="text-white/80">${speaker.company}</p>
+                          <p class="text-white/80 font-medium">${speaker.country}</p>
                       </div>
-
-                  `;
+                  </div>
+              </div>
+            `;
             speakersGrid.innerHTML += cardHTML;
           });
         }
+
+        // --- DYNAMICALLY CREATE HOST CARDS ---
+        // --- DYNAMICALLY CREATE HOST CARDS ---
+        const hostsGrid = document.getElementById("hosts-grid");
+        if (hostsGrid) {
+          hosts.forEach((host) => {
+            const hostHTML = `
+      <div class="bg-white/80 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer group" data-host-id="${host.id}">
+        <div class="relative h-96"> 
+          <img src="${host.img}" alt="Photo of ${host.name}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <h3 class="text-xl font-bold text-white">${host.name}</h3>
+            <p class="text-white/80">${host.company}</p>
+            <p class="text-white/80 font-medium">${host.country}</p>
+          </div>
+        </div>
+      </div>
+    `;
+            hostsGrid.innerHTML += hostHTML;
+          });
+        }
+
         // --- SPEAKER MODAL LOGIC ---
         const speakerModal = document.getElementById("speaker-modal");
         const closeModalBtn = document.getElementById("close-modal-btn");
         const speakersContainer = document.querySelector("#speakers");
+
         if (speakerModal && closeModalBtn && speakersContainer) {
           const modalImg = document.getElementById("modal-speaker-img");
           const modalName = document.getElementById("modal-speaker-name");
@@ -1059,6 +1200,7 @@ A dedicated lifelong learner, Marta is committed to continuous development. She 
           const modalCountry = document.getElementById("modal-speaker-country");
           const modalBio = document.getElementById("modal-speaker-bio");
           const modalLinks = document.getElementById("modal-speaker-links");
+
           const openModal = (speakerId) => {
             const speaker = speakers.find((s) => s.id === speakerId);
             if (speaker) {
@@ -1068,17 +1210,10 @@ A dedicated lifelong learner, Marta is committed to continuous development. She 
               modalCountry.textContent = speaker.country;
               modalBio.textContent = speaker.bio;
               modalLinks.innerHTML = ""; // Clear previous links
-              const icons = {
-                linkedin: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.4567 0H3.54333C2.60358 0 1.70232 0.373315 1.03782 1.03782C0.373315 1.70232 0 2.60358 0 3.54333V44.4567C0 45.3964 0.373315 46.2977 1.03782 46.9622C1.70232 47.6267 2.60358 48 3.54333 48H44.4567C45.3964 48 46.2977 47.6267 46.9622 46.9622C47.6267 46.2977 48 45.3964 48 44.4567V3.54333C48 2.60358 47.6267 1.70232 46.9622 1.03782C46.2977 0.373315 45.3964 0 44.4567 0ZM14.3067 40.89H7.09V17.9667H14.3067V40.89ZM10.6933 14.79C9.87473 14.7854 9.07583 14.5384 8.39747 14.0802C7.71911 13.622 7.19168 12.9731 6.88175 12.2154C6.57183 11.4577 6.4933 10.6252 6.65606 9.82291C6.81883 9.02063 7.2156 8.28455 7.79631 7.70756C8.37702 7.13057 9.11563 6.73853 9.91893 6.58092C10.7222 6.42331 11.5542 6.50719 12.3099 6.82197C13.0656 7.13675 13.7111 7.66833 14.1649 8.34962C14.6188 9.03092 14.8606 9.83138 14.86 10.65C14.8677 11.1981 14.765 11.7421 14.558 12.2496C14.351 12.7571 14.044 13.2178 13.6551 13.6041C13.2663 13.9905 12.8037 14.2946 12.2948 14.4983C11.786 14.702 11.2413 14.8012 10.6933 14.79ZM40.9067 40.91H33.6933V28.3867C33.6933 24.6933 32.1233 23.5533 30.0967 23.5533C27.9567 23.5533 25.8567 25.1667 25.8567 28.48V40.91H18.64V17.9833H25.58V21.16H25.6733C26.37 19.75 28.81 17.34 32.5333 17.34C36.56 17.34 40.91 19.73 40.91 26.73L40.9067 40.91Z" fill="#0A66C2"/></svg>`,
-                twitter: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.6526 3.80782H43.3995L28.6594 20.6548L46 43.5798H32.4225L21.7881 29.6759L9.61989 43.5798H2.86886L18.6349 25.56L2 3.80782H15.9222L25.5348 16.5165L36.6526 3.80782ZM34.2846 39.5414H38.0232L13.8908 7.63408H9.87892L34.2846 39.5414Z" fill="black"/></svg>`,
-                instagram: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_17_27)"><path d="M24 4.32187C30.4125 4.32187 31.1719 4.35 33.6938 4.4625C36.0375 4.56562 37.3031 4.95938 38.1469 5.2875C39.2625 5.71875 40.0688 6.24375 40.9031 7.07812C41.7469 7.92188 42.2625 8.71875 42.6938 9.83438C43.0219 10.6781 43.4156 11.9531 43.5188 14.2875C43.6313 16.8187 43.6594 17.5781 43.6594 23.9813C43.6594 30.3938 43.6313 31.1531 43.5188 33.675C43.4156 36.0188 43.0219 37.2844 42.6938 38.1281C42.2625 39.2438 41.7375 40.05 40.9031 40.8844C40.0594 41.7281 39.2625 42.2438 38.1469 42.675C37.3031 43.0031 36.0281 43.3969 33.6938 43.5C31.1625 43.6125 30.4031 43.6406 24 43.6406C17.5875 43.6406 16.8281 43.6125 14.3063 43.5C11.9625 43.3969 10.6969 43.0031 9.85313 42.675C8.7375 42.2438 7.93125 41.7188 7.09688 40.8844C6.25313 40.0406 5.7375 39.2438 5.30625 38.1281C4.97813 37.2844 4.58438 36.0094 4.48125 33.675C4.36875 31.1438 4.34063 30.3844 4.34063 23.9813C4.34063 17.5688 4.36875 16.8094 4.48125 14.2875C4.58438 11.9437 4.97813 10.6781 5.30625 9.83438C5.7375 8.71875 6.2625 7.9125 7.09688 7.07812C7.94063 6.23438 8.7375 5.71875 9.85313 5.2875C10.6969 4.95938 11.9719 4.56562 14.3063 4.4625C16.8281 4.35 17.5875 4.32187 24 4.32187ZM24 0C17.4844 0 16.6688 0.028125 14.1094 0.140625C11.5594 0.253125 9.80625 0.665625 8.2875 1.25625C6.70312 1.875 5.3625 2.69062 4.03125 4.03125C2.69063 5.3625 1.875 6.70313 1.25625 8.27813C0.665625 9.80625 0.253125 11.55 0.140625 14.1C0.028125 16.6687 0 17.4844 0 24C0 30.5156 0.028125 31.3312 0.140625 33.8906C0.253125 36.4406 0.665625 38.1938 1.25625 39.7125C1.875 41.2969 2.69063 42.6375 4.03125 43.9688C5.3625 45.3 6.70313 46.125 8.27813 46.7344C9.80625 47.325 11.55 47.7375 14.1 47.85C16.6594 47.9625 17.475 47.9906 23.9906 47.9906C30.5063 47.9906 31.3219 47.9625 33.8813 47.85C36.4313 47.7375 38.1844 47.325 39.7031 46.7344C41.2781 46.125 42.6188 45.3 43.95 43.9688C45.2812 42.6375 46.1063 41.2969 46.7156 39.7219C47.3063 38.1938 47.7188 36.45 47.8313 33.9C47.9438 31.3406 47.9719 30.525 47.9719 24.0094C47.9719 17.4938 47.9438 16.6781 47.8313 14.1188C47.7188 11.5688 47.3063 9.81563 46.7156 8.29688C46.125 6.70312 45.3094 5.3625 43.9688 4.03125C42.6375 2.7 41.2969 1.875 39.7219 1.26562C38.1938 0.675 36.45 0.2625 33.9 0.15C31.3313 0.028125 30.5156 0 24 0Z" fill="#000100"/><path d="M24 11.6719C17.1938 11.6719 11.6719 17.1938 11.6719 24C11.6719 30.8062 17.1938 36.3281 24 36.3281C30.8062 36.3281 36.3281 30.8062 36.3281 24C36.3281 17.1938 30.8062 11.6719 24 11.6719ZM24 31.9969C19.5844 31.9969 16.0031 28.4156 16.0031 24C16.0031 19.5844 19.5844 16.0031 24 16.0031C28.4156 16.0031 31.9969 19.5844 31.9969 24C31.9969 28.4156 28.4156 31.9969 24 31.9969Z" fill="#000100"/><path d="M39.6937 11.1844C39.6937 12.7782 38.4 14.0625 36.8156 14.0625C35.2219 14.0625 33.9375 12.7688 33.9375 11.1844C33.9375 9.59065 35.2313 8.30627 36.8156 8.30627C38.4 8.30627 39.6937 9.60003 39.6937 11.1844Z" fill="#000100"/></g><defs><clipPath id="clip0_17_27"><rect width="48" height="48" fill="white"/></clipPath></defs></svg>`,
-                facebook: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_17_24)"><path d="M48 24C48 10.7453 37.2547 0 24 0C10.7453 0 0 10.7453 0 24C0 35.255 7.74912 44.6995 18.2026 47.2934V31.3344H13.2538V24H18.2026V20.8397C18.2026 12.671 21.8995 8.8848 29.9194 8.8848C31.44 8.8848 34.0637 9.18336 35.137 9.48096V16.129C34.5706 16.0694 33.5866 16.0397 32.3645 16.0397C28.4294 16.0397 26.9088 17.5306 26.9088 21.4061V24H34.7482L33.4013 31.3344H26.9088V47.8243C38.7926 46.3891 48.001 36.2707 48.001 24H48Z" fill="#0866FF"/><path d="M33.4003 31.3344L34.7472 24H26.9078V21.4061C26.9078 17.5306 28.4285 16.0397 32.3635 16.0397C33.5856 16.0397 34.5696 16.0694 35.136 16.129V9.48096C34.0627 9.1824 31.439 8.8848 29.9184 8.8848C21.8986 8.8848 18.2016 12.671 18.2016 20.8397V24H13.2528V31.3344H18.2016V47.2934C20.0582 47.7542 22.0003 48 23.999 48C24.983 48 25.9536 47.9395 26.9069 47.8243V31.3344H33.3994H33.4003Z" fill="white"/></g><defs><clipPath id="clip0_17_24"><rect width="48" height="48" fill="white"/></clipPath></defs></svg>`,
-                tiktok: `<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M34.353 17.327C37.4397 19.5413 41.2211 20.8442 45.3051 20.8442V12.9573C44.5322 12.9574 43.7613 12.8765 43.0051 12.7158V18.9239C38.9214 18.9239 35.1405 17.621 32.053 15.4068V31.5018C32.053 39.5533 25.5492 46.0799 17.5268 46.0799C14.5334 46.0799 11.7512 45.1717 9.44006 43.6141C12.0779 46.3209 15.7565 48 19.8263 48C27.8492 48 34.3534 41.4734 34.3534 33.4216V17.327H34.353ZM37.1904 9.37002C35.6129 7.64048 34.5772 5.40538 34.353 2.93438V1.91995H32.1735C32.7221 5.06059 34.5934 7.74377 37.1904 9.37002ZM14.5142 37.4356C13.6329 36.2759 13.1566 34.8572 13.1587 33.3985C13.1587 29.7161 16.1336 26.7303 19.8037 26.7303C20.4877 26.7301 21.1675 26.8352 21.8194 27.0428V18.9796C21.0576 18.8748 20.2888 18.8303 19.5203 18.8466V25.1226C18.868 24.9151 18.1878 24.8096 17.5037 24.8103C13.8335 24.8103 10.8589 27.7958 10.8589 31.4787C10.8589 34.0828 12.3458 36.3374 14.5142 37.4356Z" fill="#FF004F"/><path d="M32.0529 15.4067C35.1404 17.6209 38.9213 18.9237 43.005 18.9237V12.7156C40.7255 12.2283 38.7075 11.0328 37.1903 9.37002C34.5931 7.74361 32.722 5.06043 32.1733 1.91995H26.4482V33.4213C26.4352 37.0937 23.4655 40.0673 19.8032 40.0673C17.6451 40.0673 15.7279 39.0349 14.5136 37.4356C12.3454 36.3374 10.8585 34.0827 10.8585 31.4789C10.8585 27.7963 13.8331 24.8105 17.5032 24.8105C18.2064 24.8105 18.8842 24.9204 19.5199 25.1228V18.8468C11.6384 19.0102 5.2998 25.473 5.2998 33.4214C5.2998 37.3892 6.87827 40.9861 9.44013 43.6143C11.7513 45.1717 14.5335 46.08 17.5268 46.08C25.5494 46.08 32.0531 39.5531 32.0531 31.5018V15.4067H32.0529Z" fill="black"/><path d="M43.0051 12.7156V11.037C40.9495 11.0401 38.9343 10.4624 37.1903 9.36987C38.7342 11.0661 40.7671 12.2357 43.0051 12.7156ZM32.1734 1.91997C32.1211 1.61982 32.0809 1.3177 32.053 1.01443V0H24.148V31.5016C24.1354 35.1735 21.1658 38.1471 17.5033 38.1471C16.428 38.1471 15.4128 37.891 14.5137 37.4358C15.7279 39.0349 17.6452 40.0671 19.8033 40.0671C23.4652 40.0671 26.4354 37.0938 26.4482 33.4214V1.91997H32.1734ZM19.5203 18.8468V17.0598C18.8598 16.9692 18.1938 16.9237 17.5271 16.924C9.50383 16.9239 3 23.4508 3 31.5016C3 36.5491 5.55612 40.9974 9.44034 43.614C6.87848 40.986 5.30002 37.3889 5.30002 33.4213C5.30002 25.473 11.6385 19.0102 19.5203 18.8468Z" fill="#00F2EA"/></svg>`,
-                website: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`,
-              };
+
               Object.entries(speaker.links).forEach(([key, value]) => {
                 const platformName = key.charAt(0).toUpperCase() + key.slice(1);
-                const iconSvg = icons[key.toLowerCase()];
+                const iconSvg = socialIcons[key.toLowerCase()];
                 if (iconSvg) {
                   const link = document.createElement("a");
                   link.href = value;
@@ -1097,15 +1232,18 @@ A dedicated lifelong learner, Marta is committed to continuous development. She 
               speakerModal.classList.remove("hidden");
             }
           };
+
           const closeModal = () => {
             speakerModal.classList.add("hidden");
           };
+
           speakersContainer.addEventListener("click", (e) => {
             const card = e.target.closest("[data-speaker-id]");
             if (card) {
               openModal(card.dataset.speakerId);
             }
           });
+
           closeModalBtn.addEventListener("click", closeModal);
           speakerModal.addEventListener("click", (e) => {
             if (e.target === speakerModal) {
@@ -1118,6 +1256,79 @@ A dedicated lifelong learner, Marta is committed to continuous development. She 
               !speakerModal.classList.contains("hidden")
             ) {
               closeModal();
+            }
+          });
+        }
+
+        // --- HOST MODAL LOGIC ---
+        const hostModal = document.getElementById("host-modal");
+        const closeHostModalBtn = document.getElementById(
+          "close-host-modal-btn"
+        );
+        const hostsContainer = document.querySelector("#hosts");
+
+        if (hostModal && closeHostModalBtn && hostsContainer) {
+          const modalHostImg = document.getElementById("modal-host-img");
+          const modalHostName = document.getElementById("modal-host-name");
+          const modalHostCompany =
+            document.getElementById("modal-host-company");
+          const modalHostCountry =
+            document.getElementById("modal-host-country");
+          const modalHostBio = document.getElementById("modal-host-bio");
+          const modalHostLinks = document.getElementById("modal-host-links");
+
+          const openHostModal = (hostId) => {
+            const host = hosts.find((h) => h.id === hostId);
+            if (host) {
+              modalHostImg.src = host.img;
+              modalHostName.textContent = host.name;
+              modalHostCompany.textContent = host.company;
+              modalHostCountry.textContent = host.country;
+              modalHostBio.textContent = host.bio;
+              modalHostLinks.innerHTML = ""; // Clear previous links
+
+              Object.entries(host.links).forEach(([key, value]) => {
+                const platformName = key.charAt(0).toUpperCase() + key.slice(1);
+                const iconSvg = socialIcons[key.toLowerCase()];
+                if (iconSvg) {
+                  const link = document.createElement("a");
+                  link.href = value;
+                  link.target = "_blank";
+                  link.rel = "noopener noreferrer";
+                  link.setAttribute(
+                    "aria-label",
+                    `Visit ${host.name}'s ${platformName} profile`
+                  );
+                  link.className =
+                    "text-gray-500 hover:text-gray-800 transition-colors";
+                  link.innerHTML = iconSvg;
+                  modalHostLinks.appendChild(link);
+                }
+              });
+              hostModal.classList.remove("hidden");
+            }
+          };
+
+          const closeHostModal = () => {
+            hostModal.classList.add("hidden");
+          };
+
+          hostsContainer.addEventListener("click", (e) => {
+            const card = e.target.closest("[data-host-id]");
+            if (card) {
+              openHostModal(card.dataset.hostId);
+            }
+          });
+
+          closeHostModalBtn.addEventListener("click", closeHostModal);
+          hostModal.addEventListener("click", (e) => {
+            if (e.target === hostModal) {
+              closeHostModal();
+            }
+          });
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && !hostModal.classList.contains("hidden")) {
+              closeHostModal();
             }
           });
         }
